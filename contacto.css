@@ -1,0 +1,11 @@
+/*Mobile*/
+body {
+    background-color: #000031;
+}
+.map-container{
+    display: none;
+}
+
+.contact-info {
+    margin:  60px;
+}
