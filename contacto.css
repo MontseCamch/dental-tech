@@ -1,11 +1,49 @@
 /*Mobile*/
-body {
+.contact {
     background-color: #000031;
+    font-family: "Outfit", sans-serif;
+    color: #FFFFFF;
 }
-.map-container{
-    display: none;
+
+.contact-title{
+    text-align: center;
+    font-size: 40px;
 }
 
 .contact-info {
     margin:  60px;
+}
+
+.form-label {
+    font-size: 22px;
+}
+
+.btn-sumbit{
+    background-color: #4EADAF;
+    color: #000031;
+    font-size: 22px;
+    font-weight: 500;
+    border: none;
+    border-radius: 50px;
+    padding: 8px;
+    width: 110px;
+}
+
+.map-container{
+    display: none;
+}
+
+.information{
+    margin-top: 70px;
+    font-size: 22px;
+    line-height: 1.2;
+}
+
+.whatsapp-icon{
+    margin-top: 50px;
+    display: flex;
+    
+}
+.whatsapp-logo {
+    width: 53px;
 }
