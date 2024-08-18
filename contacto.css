@@ -9,6 +9,7 @@
 
 .contact-title {
     text-align: center;
+    font-family: "Kanit", sans-serif;
     font-size: 36px;
 }
 
@@ -20,6 +21,7 @@
     background-color: #4EADAF;
     color: #000031;
     font-size: 22px;
+    font-family: "Kanit", sans-serif;
     font-weight: 500;
     border: none;
     border-radius: 50px;
