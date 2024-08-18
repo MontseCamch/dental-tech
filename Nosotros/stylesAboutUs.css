@@ -1,0 +1,98 @@
+body {
+    background-color: #000031;
+}
+
+/*"Conoce a nuestro equipo de desarrollo: FemForce"*/
+/*Encabezado*/
+
+.conteiner {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 130px;
+    overflow: hidden;
+    position: relative;
+        
+}
+
+.header-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.35;
+    position: absolute;
+    left: 0;
+}
+
+.header-title {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    position: absolute; /*permite que el encabezado se sobreponga a la imagen*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    white-space: nowrap; /*para que el texto se muestre en una sola línea y no en varias*/
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+
+/*"¿Cómo nace FemForce?"*/
+h3 {
+    color: #CFE9EB;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+p {
+    color: #CFE9EB;
+    padding-left: 130px;
+    padding-right: 130px;
+    font-size: 1.4rem;
+}
+
+/*"Sus integrantes"*/
+/*Cards*/
+
+.card {
+    border-radius: 0;
+    color: #CFE9EB;
+    background-color: #000031;
+    border: 1px solid #CFE9EB;
+    width: 420px;
+    margin-bottom: 20px;
+}
+
+.card-title {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+}
+
+
+.card-img-top {
+    border-radius: 0;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.card-subtitle {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.icon-img {
+
+    width: 50px;
+    height: 50px;
+}
+
+.card p {
+    color: #CFE9EB;
+    font-size: 1.2rem;
+}
