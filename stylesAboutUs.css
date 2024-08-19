@@ -1,11 +1,192 @@
 body {
+    font-family: Arial, sans-serif;
     background-color: #000031;
+    color: #f0f0f0;
 }
+
+/*Primera parte
+Descripción de Dental Tech*/
+.div1{
+    text-align: center;
+    background-image: url(/Assets/titulo1.png); 
+    background-position: center; size: cover;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+#nosotros{
+    font-size: 350%;
+    position: center;
+}
+
+.iconodental{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+
+.div2{
+    background-image: url(/Assets/doctoresDentalNos.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 30px;
+}
+
+.clinica{
+    color: #FFFFFF;
+    text-align-last: center;
+}
+
+.col-4{
+    border:1px solid #FFFFFF;
+    margin-top: 5%;
+    margin-left: 7%;
+    margin-right: 7%;
+    padding-top: 2%;
+}
+
+.iconos{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 3%;
+}
+
+.titulos{
+    color: #FFFFFF;
+    text-align-last: center;
+
+}
+
+.textocaja{
+    text-align-last: center;
+}
+
+.div-valores{
+    margin-top: 5%;
+}
+
+.iconos2{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1%;
+}
+
+.col{
+    border:1px solid #FFFFFF;
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.valor2{
+    border:1px solid #FFFFFF;
+    margin: 1%;
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-right: 2%;   
+}
+
+.iconos3{
+    width: 50px;
+    height: 50px;
+    
+}
+
+/*"Conoce a nuestro equipo"*/
+
+#title1 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-image: url(/Img-AboutUs/Header1.png);
+    background-size: cover; /* Asegura que la imagen cubra todo el área */
+    color: #ffffff; 
+    margin-bottom: 30px;
+    padding: 20px 0; 
+    width: 100%;
+  }
+  
+  
+  #title2 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-image: url(Img-AboutUs/sobreNosotros.jpg);
+    background-size: cover; /* Asegura que la imagen cubra todo el área */
+    background-position: center; 
+    color: #ffffff; 
+    margin-bottom: 30px; /* Añade un margen inferior para separación */
+    padding: 20px 0;
+    width: 100%;
+}
+.card{
+    background-color: #B6D1C6;
+
+}
+  
+  /*Estilo para el título de la tarjeta */
+  .card-title {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #000031;
+    text-align: center;
+  }
+  
+  /* Estilo para el subtítulo de la tarjeta */
+  .card-subtitle {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color:#000031;
+    text-align: center;
+  }
+
+ .card-text{
+    color: #000031;
+    text-align: justify;
+
+  }
+  
+  /* Centrar el icono de las tarjetas */
+  .icon-img {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Estilo para subtitulo  carrusel */
+  .carousel-caption {
+    max-width: 200px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 4px;
+    margin: 0 auto;
+  }
+  
+  /* Estilo para las imágenes del carrusel */
+  .carousel-item img {
+    max-height: 400px; /* Limita la altura máxima de las imágenes */
+    object-fit: cover;
+    width:auto;
+    border-radius: 10px;
+  }
+  
+  /* Contenedor del carrusel */
+  .container {
+    margin-top: 50px;
+    margin: 0 auto;
+    max-width: 1100;
+  }
+
 
 /*"Conoce a nuestro equipo de desarrollo: FemForce"*/
 /*Encabezado*/
 
-.conteiner {
+.conteinerb {
     text-align: center;
     position: relative;
     width: 100%;
@@ -16,7 +197,7 @@ body {
         
 }
 
-.header-image {
+.header-imageb {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -25,9 +206,10 @@ body {
     left: 0;
 }
 
-.header-title {
-    font-size: 3rem;
+.header-titleb {
+    font-size: 2.9rem;
     margin-bottom: 10px;
+    margin-top: 10px;
     position: absolute; /*permite que el encabezado se sobreponga a la imagen*/
     top: 50%;
     left: 50%;
@@ -40,7 +222,7 @@ body {
 
 
 /*"¿Cómo nace FemForce?"*/
-h3 {
+.EncabM {
     color: #CFE9EB;
     margin-top: 40px;
     margin-bottom: 40px;
@@ -48,7 +230,7 @@ h3 {
     font-size: 2rem;
 }
 
-p {
+.textoFemF {
     color: #CFE9EB;
     padding-left: 130px;
     padding-right: 130px;
@@ -58,7 +240,7 @@ p {
 /*"Sus integrantes"*/
 /*Cards*/
 
-.card {
+.card-b {
     border-radius: 0;
     color: #CFE9EB;
     background-color: #000031;
@@ -67,32 +249,32 @@ p {
     margin-bottom: 20px;
 }
 
-.card-title {
+.card-title-b {
     margin-top: 25px;
     margin-bottom: 20px;
     font-size: 1.6rem;
 }
 
 
-.card-img-top {
+.card-img-top-b {
     border-radius: 0;
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
 }
 
-.card-subtitle {
+.card-subtitle-b {
     font-weight: bold;
     font-size: 1.4rem;
 }
 
-.icon-img {
+.icon-img-b {
 
     width: 50px;
     height: 50px;
 }
 
-.card p {
+.card-text-b {
     color: #CFE9EB;
     font-size: 1.2rem;
 }
