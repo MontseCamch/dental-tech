@@ -1,4 +1,4 @@
-const formInputs = document.querySelectorAll("[required]");
+const formInputs = document.querySelector("[required]");
 
 formInputs.forEach((data) => {
     data.addEventListener("submit", () => verifyInput(data));
@@ -21,7 +21,7 @@ function ItsAPhoneNumber(data) {
         data.setCustomValidity("Valores repetidos");
     } else {
         console.log("Teléfono válido");
-        campo.setCustomValidity("Teléfono válido");
+        data.setCustomValidity("Teléfono válido");
     }
 
  }
@@ -42,3 +42,6 @@ function hasRepeatedNumbers(tel) {
 
     return repeatedNumbers.includes(tel);
 }
+
+
+
