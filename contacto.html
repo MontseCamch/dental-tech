@@ -28,17 +28,17 @@
             <label for="nombre" class="form-label">Nombre</label>
             <input name="nombre" type="text" class="form-control" id="nombre" placeholder="Nombre" required>
           </div>
-          <p class="form_input-error">El nombre sólo puede contener letras y espacios.</p>
+          <p class="form_input-error" id="error-nombre">El nombre sólo puede contener letras y espacios.</p>
           <div class="mb-3" id="field-telefono">
             <label for="telefono" class="form-label">Número de teléfono</label>
             <input name="telefono" type="tel" class="form-control" id="telefono" placeholder="5512345678" required>
           </div>
-          <p class="form_input-error">El número de teléfono sólo puede contener números.</p>
+          <p class="form_input-error" id="error-telefono">El número de teléfono sólo puede contener números.</p>
           <div class="mb-3" id="field-email">
             <label for="email" class="form-label">Correo electrónico</label>
             <input name="email" type="email" class="form-control" id="email" placeholder="usuario@mail.com" required>
           </div>
-          <p class="form_input-error">El correo electrónico no es válido.</p>
+          <p class="form_input-error" id="error-email">El correo electrónico no es válido.</p>
           <div class="mb-3">
             <label for="TextArea" class="form-label">Mensaje o sugerencia</label>
             <textarea class="form-control" id="text" rows="3" required></textarea>
