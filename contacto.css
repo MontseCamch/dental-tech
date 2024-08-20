@@ -17,6 +17,17 @@
     font-size: 22px;
 }
 
+.form_input-error {
+    font-size: 14px;
+    color: #88DEB0;
+    margin-bottom: 0;
+    display: none;
+}
+
+.form_input-error-active {
+    display: block;
+}
+
 .btn-sumbit {
     background-color: #4EADAF;
     color: #000031;
@@ -27,6 +38,22 @@
     border-radius: 50px;
     padding: 8px;
     width: 110px;
+}
+
+.btn-sumbit:hover{
+    background-color: #69C6AF;
+}
+
+.submitted-form {
+    font-size: 18px;
+    margin-top: 5px;
+    color: #CFE9EB;
+    text-align: center;
+    display: none;
+}
+
+.submitted-form-active {
+    display: block;
 }
 
 .map-container {
@@ -64,11 +91,11 @@
 
 /* Desktop */
 @media (min-width: 769px) {
-    .contact{
+    .contact {
         margin: 60px;
     }
 
-    .contact-title{
+    .contact-title {
         font-size: 42px;
     }
 

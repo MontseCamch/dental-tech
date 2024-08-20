@@ -1,4 +1,47 @@
-const formInputs = document.querySelector("[required]");
+const form = document.getElementById('contact-form');
+const inputs= document.querySelectorAll('#contact-form input');
+
+const expressions = {
+	nombre: /^[a-zA-ZÀ-ÿ\s]{3,100}$/, // Letras y espacios, pueden llevar acentos.
+	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+	telefono: /^\d{10,14}$/ // 10 a 14 números.
+}
+
+const validateForm = (e) => {
+    switch(e.target.name) {
+        case "nombre":
+            if(expressions.nombre.test(e.target.value)){
+                console.log("Nombre válido");
+                document.querySelector('.form_input-error').classList.remove('form_input-error-active');
+            } else {
+                document.querySelector('.form_input-error').classList.add('form_input-error-active');
+            }
+        break;
+        case "telefono":
+            if(expressions.nombre.test(e.target.value)){
+                console.log("Nombre válido");
+                document.querySelector('.form_input-error').classList.remove('form_input-error-active');
+            } else {
+                document.querySelector('.form_input-error').classList.add('form_input-error-active');
+            }
+            
+        break;
+        case "email":
+            
+        break;
+    }
+}
+
+inputs.forEach((input) => {
+    input.addEventListener('keyup', validateForm);
+    input.addEventListener('blur', validateForm);
+});
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+});
+
+/*const formInputs = document.querySelector("[required]");
 
 formInputs.forEach((data) => {
     data.addEventListener("submit", () => verifyInput(data));
@@ -41,7 +84,7 @@ function hasRepeatedNumbers(tel) {
     ];
 
     return repeatedNumbers.includes(tel);
-}
+}*/
 
 
 
