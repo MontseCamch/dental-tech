@@ -3,7 +3,7 @@
     background-color: #000031;
     font-family: "Outfit", sans-serif;
     color: #FFFFFF;
-    margin: 40px;
+    margin: 0 40px;
     box-sizing: border-box;
 }
 
@@ -78,6 +78,7 @@
 
 /* Tablet */
 @media (min-width: 601px) {
+    
     .map-container {
         display: flex;
         margin: 80px auto;
@@ -92,7 +93,7 @@
 /* Desktop */
 @media (min-width: 769px) {
     .contact {
-        margin: 60px;
+        margin: 0 60px;
     }
 
     .contact-title {
