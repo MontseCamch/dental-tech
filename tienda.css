@@ -1,0 +1,120 @@
+
+/* Cambia el fondo del cuerpo */
+body {
+   background-color: #000031 !important;
+   color: #ffffff;
+   font-family: Arial, sans-serif;
+}
+
+/* Estilo del encabezado y barra de búsqueda */
+nav {
+   justify-content: center !important;
+}
+.navbar {
+   background-color: #377a98 !important;
+   justify-content: center;
+}
+
+.navbar p {
+   color:#ffffff;
+   font-size: 18px;
+   display: flex !important;
+}
+
+
+input[type="search"] {
+   width: 80%;
+   background-color: #ffffff;
+   padding: 10px;
+}
+
+
+/* Contenedor principal */
+.container-fluid mt-4{
+   background-color: #000031;
+   padding: 20px;
+}
+
+.row{
+   background-color: #000031;
+}
+/* Columna de botones */
+.btn-check:checked + .btn, .btn-check:active + .btn {
+   background-color: #80c4db;
+   border-color: #80c4db;
+}
+
+.btn {
+   color: #ffffff;
+   background-color: #4280b3;
+   border: none;
+   border-radius: 5px;
+   margin-bottom: 10px;
+   padding: 10px;
+   text-align: center;
+}
+
+
+
+/* Tarjetas de productos */
+.card {
+   background-color: #000031;
+   border: 2px;
+   border-color: #ffffff !important; 
+   border-radius: 10% !important;
+   padding: 15px;
+   margin: 10px;
+   text-align: center;
+}
+
+.btn-outline-primary {
+   justify-content: left;
+   display: flex;
+}
+
+.btn-outline-danger {
+ justify-content: right;
+ display: flex;
+}
+
+.custom-card-bg {
+   background-color: #000031 !important;
+}
+
+.card img {
+  
+  display: flex;
+ align-content: center;
+}
+
+.card-title {
+   font-size: 16px;
+   color: #ffffff !important;
+   justify-content: center;
+}
+
+.card-text {
+   font-size: 14px;
+   color: #ffffff;
+   justify-content: center;
+}
+
+.card-price {
+   font-size: 16px;
+   color: #ffffff;
+}
+
+/* Estilo del pie de página */
+footer {
+   background-color: #6bc1c7;
+   color: #ffffff;
+   text-align: center;
+   padding: 10px;
+   margin-top: 20px;
+}
+
+footer a {
+   color: #ffffff;
+   text-decoration: none;
+   margin: 0 5px;
+}
