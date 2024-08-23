@@ -2,11 +2,11 @@ const bancoDeImagenes = {
 
   infantiles: ['img/children0.jpeg', 'img/children1.jpeg', 'img/children2.jpeg', 'img/children3.jpeg', 'img/children4.jpeg', 'img/children5.jpeg', 'img/children7.jpeg', 'img/children8.jpeg'],
 
-  cepillos: ['img/toothbrush0.jpg', 'img/toothbrush1.jpg', 'img/toothbrush2.jpeg', 'img/toothbrush3.jpg', 'img/toothbrush4.jpeg', 'img/toothbrush5.jpeg', 'img/toothbrush6.jpeg', 'img/toothbrush7.jpeg', 'img/toothbrush8.jpeg'],
+  cepillos: ['img/toothbrush0.jpg', 'img/toothbrush1.jpg', 'img/toothbrush2.jpeg', 'img/toothbrush3.jpeg', 'img/toothbrush4.jpeg', 'img/toothbrush5.jpeg', 'img/toothbrush6.jpeg', 'img/toothbrush7.jpeg', 'img/toothbrush8.jpeg'],
 
-  pastas: ['img/toothpaste0.jpg', 'img/toothpaste1.jpeg', 'img/toothpaste2.jpeg', 'img/toothpaste3.jpeg', 'img/toothpaste4.jpg', 'img/toothpaste5.jpg','img/toothpaste6.jpeg', 'img/toothpaste7.jpeg', 'img/toothpaste8.jpeg'],
+  pastas: ['img/toothpaste0.jpeg', 'img/toothpaste1.jpeg', 'img/toothpaste2.jpeg', 'img/toothpaste3.jpeg', 'img/toothpaste4.jpg', 'img/toothpaste5.jpeg','img/toothpaste6.jpeg', 'img/toothpaste7.jpeg', 'img/toothpaste8.jpeg'],
 
-  hiloDental: ['img/dentalfloss0.jpeg', 'img/dentalfloss1.jpeg', 'img/dentalfloss2.jpeg', 'img/dentalfloss3.jpeg', 'img/dentalfloss4.jpeg', 'img/dentalfloss5.jpeg', 'img/dentalfloss6.jpeg', 'img/dentalfloss7.jpeg', 'img/dentalfloss8.jpeg'],
+  hiloDental: ['img/dentalfloss0.jpeg', 'img/dentalfloss1.jpeg', 'img/dentalfloss2.jpeg', 'img/dentalfloss3.jpeg', 'img/dentalfloss4.jpeg', 'img/dentalfloss5.jpeg', 'img/dentalfloss6.jpeg', 'img/dentalfloss7.png', 'img/dentalfloss8.jpeg'],
 
   enjuagues: ['img/mouthwash0.jpeg', 'img/mouthwash2.jpeg', 'img/mouthwash3.jpeg', 'img/mouthwash4.jpeg', 'img/mouthwash5.jpeg', 'img/mouthwash6.jpeg', 'img/mouthwash7.jpeg', 'img/mouthwash8.jpeg']
 }; //Declaracion de los productos que se mostraran en las tarjetas
