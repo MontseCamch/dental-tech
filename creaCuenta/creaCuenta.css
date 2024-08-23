@@ -1,0 +1,95 @@
+body {
+
+    font-family:"Outfit", sans-serif;;
+    background-color: #000031;
+    color: #FFFDF7;
+    border-radius: 40px;
+    padding: 100px 60px ;
+justify-content: center;
+    align-items: center;
+     text-align: center; 
+     margin: auto;
+    width: 95%;
+}
+
+input{
+    color: #020202;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+   width: 450px; /*Cambia el ancho del cuadro*/
+    border: none;
+    margin: 0;
+    text-align: center;
+    justify-content: center; /*Centra horixontalmente
+    align-items: center; /*Centra verticalmente */
+}
+
+
+h2 {
+    color:#FFFDF7 ;
+    align-content: center;
+
+}
+
+
+.date {
+    background-color:  #4EADAF;
+    color: #FFFDF7;
+    padding: 5px;
+    width: 350px;
+    border-radius: 10px;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    
+}
+
+.button:link {
+
+    border: 1px solid #4EADAF;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+
+}
+
+ .button:hover {
+    background-color: #4EADAF;
+    color: #FFFDF7;
+ }
+
+.register-lin {
+    color: #4EADAF;
+}
+
+/*visibilidad de la contraseña*/
+
+
+#eyes {
+    display:flexbox;
+    align-items: center;
+    cursor: pointer;
+}
+
+/*.wrapper {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    
+}*/
+
+.show-password>#open-eye {
+    display: unset;
+    align-items: center;
+}
+
+.show-password>#closed-eye {
+    display: none;
+    text-align: center;
+}
+
+#open-eye  {
+    display: none;
+}

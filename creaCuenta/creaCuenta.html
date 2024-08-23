@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crearunacuenta</title>
+
+    <link rel="stylesheet" href="./creaCuenta.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+  
+
+  <form action="" method="post" id="form">
+
+  <div class="form">
+
+    <h2>CREA   UNA   CUENTA   NUEVA</h2>
+    <br>
+    <br>
+
+    <div class="grupo">
+    <label for="name">Nombre</label>
+    <br>
+    <br>
+    
+    <input type="usuario" id="nombre" name="usuario">
+    </div>
+    <br>
+    <br>
+    <br>
+<div class="grupo">
+  <label for="usuario">Correo electronico</label>
+  <br>
+  <br>
+    <input type="email" name="" id="email">
+  <br>
+      <!--<input class="formulario-form"  type="text" id="mail" name="usuario" >-->
+    </div>
+  <br>
+  <br>
+  
+    <div class="grupo">
+      <label for="contrasena">Contraseña</label>
+      <br>
+      <br>
+      <input type="password" id="password" name="password"> <!--contrasena--> 
+      </div>
+      <br>
+      <div  id="eyes">
+
+        <span id="open-eye" class="material-simbols-outlined">visibility</span>
+
+        <span id="closed-eye" class="material-simbols-outlined">visibility_off</span>
+      </div>
+
+
+      <br>
+  <div class="calendar">
+    <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+    <br>
+    <br>
+<input class="date" type="date" id="birthday" name="fecha_nacimiento" min="1935-01-01" max="2024-12-31">
+    </div> 
+  <br>
+  <br>  
+    </div> 
+
+    <div>
+      <br>
+      <button class="button"  type="submit" > REGISTRARSE</button>
+    </div>
+
+  <div  id="error">
+  </div>
+
+  <br>
+      <div class="register-link">
+
+    <p>Ya tengo una cuenta<a href="http://127.0.0.1:5500/inicioSesion/Iniciasesion.html" class="register-lin" href="">  Accede</a></p>
+
+</div>
+  
+  
+</div>  
+</form>
+
+
+<script src="./index.js" > </script>
+<script src="./json.js" > </script>
+<script src="/data/personas.json" > </script>
+
+
+
+</body>
+</html>
