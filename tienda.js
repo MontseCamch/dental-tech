@@ -236,7 +236,7 @@ function eliminarProducto(col) {
       productosGuardados.push(nuevoProducto);
       //Se crea una tarjeta con el producto añadido
       const nuevaTarjeta = crearTarjeta(nuevoProducto, price);
-      cardContainer.document.querySelector(nuevaTarjeta);
+      cardContainer.appendChild(nuevaTarjeta);
 
       this.reset();
       this.style.display = "none";
