@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       const cardPrice = document.createElement('h4');
       cardPrice.className = 'card-price';
-      cardPrice.textContent = `${precio !== null ? precio : generarPrecio(70, 150)}$`; //genera un precio entre 70 y 150
+      cardPrice.textContent = `$ ${precio !== null ? precio : generarPrecio(70, 150)}`; //genera un precio entre 70 y 150
 
       const cardText = document.createElement('p');
       cardText.className = 'card-text';
