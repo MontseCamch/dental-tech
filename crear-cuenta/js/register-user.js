@@ -1,28 +1,18 @@
-const formUser = document.querySelector("#sign-up-form");
+ const formUser = document.querySelector("#sign-up-form");
 
-const getInfo = (event) => {
-  event.preventDefault();
-  
-  const data = new FormData(event.target);
-  
-  const nombre = data.get('nombre');
-  const correo = data.get('email');
-  const contrasena = data.get('contrasena');
-  const telefono = data.get('telefono');
-  const nacimiento = data.get('fecha_nacimiento');
-  return nombre, correo, contrasena, telefono, nacimiento;
-}
 
-formUser.addEventListener('submit',getInfo);
-/*const usersList = () => {
-  return fetch("http://localhost:3001/users")
+
+
+//Función para colocar los datos en el servidor
+const usersList = () => {
+  return fetch("http://localhost:3000/users")
   .then((res) => res.json())
   .catch((err) => console.log(err));
   console.log(res);
 };
 
 const createUser = (nombre, correo, password, telefono, nacimiento) => {
-  return fetch("http://localhost:3001/users", {
+  return fetch("http://localhost:3000/users", {
       method: "POST",
       headers: {
           "Content-Type": "application/json",
@@ -52,5 +42,10 @@ formUser.addEventListener("submit", (event) => {
   createUser(nombre, correo, password, telefono, nacimiento)
   .then((res) => console.log(res))
   .catch((err) => console.log(err));
-});*/
+});
+
+export const servicesUsers = {
+  createUser,
+};
+
 

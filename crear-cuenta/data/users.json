@@ -1,12 +1,28 @@
 {
-    "users": [
-      {
-        "nombre" : "yamileth",
-        "correo" : "yamilethviveros07@gmail.com",
-        "password" : "yami.viv",
-        "telefono": 5512345678,
-        "nacimiento" : "07/02/2000",
-        "id": 1
-      }
-    ]
-  }
+  "users": [
+    {
+      "nombre": "yamileth",
+      "correo": "yamilethviveros07@gmail.com",
+      "password": "yami.viv",
+      "telefono": "5512345678",
+      "nacimiento": "07/02/2000",
+      "id": "1"
+    },
+    {
+      "id": "b0c2",
+      "nombre": "Dan",
+      "correo": "dani@mail.com",
+      "password": "queso123",
+      "telefono": "5512359645",
+      "nacimiento": "1990-10-10"
+    },
+    {
+      "id": "1174",
+      "nombre": "Jasiel",
+      "correo": "jasiel@mail.com",
+      "password": "ja-0123",
+      "telefono": "5526512345",
+      "nacimiento": "1999-08-02"
+    }
+  ]
+}

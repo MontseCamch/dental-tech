@@ -1,3 +1,5 @@
+import { servicesUsers } from "./register-user.js";
+
 const form = document.getElementById('sign-up-form');
 const inputs = document.querySelectorAll('#sign-up-form input');
 
@@ -51,6 +53,7 @@ const validateInput = (expression, input, id) => {
     }
 }
 
+//Función para verificar que ambas contraseñas son iguales
 const validatePassword = () => {
     const inputPassword1 = document.getElementById('contrasena');
     const inputPassword2 = document.getElementById('contrasena2');
@@ -70,8 +73,8 @@ inputs.forEach((input) => {
     input.addEventListener('blur', validateForm);
 });
 
-const alertElement = document.getElementById('alert-error');
 
+//Código que se ejecuta al enviar el formulario. Verifica si los campos fueron llenados
 document.addEventListener('DOMContentLoaded', function () {
     form.addEventListener('submit', function (e) {
         e.preventDefault();
@@ -90,6 +93,18 @@ document.addEventListener('DOMContentLoaded', function () {
             alertElement.classList.add('show');
             alertElement.classList.remove('fade');
         }
+
+        //Obtiene la información en el formulario para enviarla al archivo JSON
+        const nombre = document.querySelector("#nombre").value;
+        const correo = document.querySelector("#correo]").value;
+        const contrasena = document.querySelector("#contrasena").value;
+        const telefono = document.querySelector("#telefono").value;
+        const nacimiento = document.querySelector("#nacimiento").value;
+
+        //Ejecuta la función para crear usuario
+        servicesUsers.createUser(nombre, correo, contrasena, telefono, nacimiento)
+            .then((res) => console.log(res))
+            .catch((err) => console.log(err));
     });
 });
 
