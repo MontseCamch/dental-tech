@@ -31,6 +31,30 @@
       "password": "password_027",
       "telefono": "5502123648",
       "nacimiento": "1991-11-11"
+    },
+    {
+      "id": "3623",
+      "nombre": "Joel",
+      "correo": "joel@mail.com",
+      "password": "contrasena-456",
+      "telefono": "5514782369",
+      "nacimiento": "1993-01-23"
+    },
+    {
+      "id": "ed1f",
+      "nombre": "Luis Pérez",
+      "correo": "luis@mail.com",
+      "password": "ls_123",
+      "telefono": "5514207854",
+      "nacimiento": "1978-07-24"
+    },
+    {
+      "id": "d643",
+      "nombre": "Karla García",
+      "correo": "karla@mail.com",
+      "password": "ka-258",
+      "telefono": "5502106070",
+      "nacimiento": "1960-09-19"
     }
   ]
 }

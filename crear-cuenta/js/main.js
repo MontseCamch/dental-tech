@@ -84,20 +84,29 @@ document.addEventListener('DOMContentLoaded', function () {
         const alertElement = document.getElementById('alert-error');
 
         if (fields.nombre && fields.email && fields.contrasena && fields.telefono && fecha.value !== "") {
-            form.reset();
+            //Obtiene la información en el formulario para enviarla al archivo JSON
+            const nombre = document.getElementById("nombre").value;
+            const correo = document.getElementById("email").value;
+            const password = document.getElementById("contrasena").value;
+            const telefono = document.getElementById("telefono").value;
+            const nacimiento = document.getElementById("fecha_nacimiento").value;
             alertElement.style.display = 'none';
             alertElement.classList.remove('show');
             alertElement.classList.add('fade');
+
+
+            //Ejecuta la función para crear usuario
+            servicesUsers.createUser(nombre, correo, password, telefono, nacimiento)
+                .then((res) => console.log(res))
+                .catch((err) => console.log(err));
+            form.reset();
         } else {
             alertElement.style.display = 'block';
             alertElement.classList.add('show');
             alertElement.classList.remove('fade');
         }
 
-        //Ejecuta la función para crear usuario
-        servicesUsers.createUser(nombre, correo, contrasena, telefono, nacimiento)
-            .then((res) => console.log(res))
-            .catch((err) => console.log(err));
+
     });
 });
 
