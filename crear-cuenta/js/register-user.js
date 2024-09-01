@@ -32,6 +32,7 @@ const createUser = (nombre, correo, password, telefono, nacimiento) => {
 formUser.addEventListener("submit", (event) => {
   event.preventDefault();
 
+  //Obtiene la información en el formulario para enviarla al archivo JSON
   const nombre = document.getElementById("nombre").value;
   const correo = document.getElementById("email").value;
   const password = document.getElementById("contrasena").value;

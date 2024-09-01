@@ -94,13 +94,6 @@ document.addEventListener('DOMContentLoaded', function () {
             alertElement.classList.remove('fade');
         }
 
-        //Obtiene la información en el formulario para enviarla al archivo JSON
-        const nombre = document.querySelector("#nombre").value;
-        const correo = document.querySelector("#correo]").value;
-        const contrasena = document.querySelector("#contrasena").value;
-        const telefono = document.querySelector("#telefono").value;
-        const nacimiento = document.querySelector("#nacimiento").value;
-
         //Ejecuta la función para crear usuario
         servicesUsers.createUser(nombre, correo, contrasena, telefono, nacimiento)
             .then((res) => console.log(res))

@@ -23,6 +23,14 @@
       "password": "ja-0123",
       "telefono": "5526512345",
       "nacimiento": "1999-08-02"
+    },
+    {
+      "id": "6ef1",
+      "nombre": "Ana Lacy",
+      "correo": "ana@mail.com",
+      "password": "password_027",
+      "telefono": "5502123648",
+      "nacimiento": "1991-11-11"
     }
   ]
 }
