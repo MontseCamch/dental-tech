@@ -1,0 +1,12 @@
+{
+    "users": [
+      {
+        "nombre" : "yamileth",
+        "correo" : "yamilethviveros07@gmail.com",
+        "password" : "yami.viv",
+        "telefono": 5512345678,
+        "nacimiento" : "07/02/2000",
+        "id": 1
+      }
+    ]
+  }
