@@ -44,18 +44,6 @@
     background-color: #69C6AF;
 }
 
-.submitted-form {
-    font-size: 18px;
-    margin-top: 5px;
-    color: #CFE9EB;
-    text-align: center;
-    display: none;
-}
-
-.submitted-form-active {
-    display: block;
-}
-
 .map-container {
     display: none;
 }

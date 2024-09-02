@@ -24,18 +24,21 @@
     <div class="container-fluid">
       <!--Logo-->
       <a class="navbar-brand" href="#">
-        <img src="assets/LogoV1.png" alt="Logo" width="45" height="48" class="navbar-brand fs-4 d-inline-block align-text-center">Dental-Tech</a>
+        <img src="../assets/LogoV1.png" alt="Logo" width="45" height="48"
+          class="navbar-brand fs-4 d-inline-block align-text-center">Dental-Tech</a>
       <!--Barra lateral Btn-->
-      <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="sidebar offcanvas offcanvas-start" tabindex="-1" 
-      id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel">
 
-      <!--Barra lateral encabezado-->
+        <!--Barra lateral encabezado-->
         <div class="offcanvas-header text-white border-bottom">
           <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Dental-Tech</h5>
-          <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
         </div>
 
         <!--Barra lateral cuerpo-->
@@ -60,7 +63,8 @@
           <!--Inicio de sesion / registro-->
           <div class="login d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
             <a href="#signup" class="text-white">Registrate</a>
-            <a href="#login" class="text-white text-decoration-none px-4 py-1 rounded-4" style="background-color:#4EADAF;">Inicia</a>
+            <a href="#login" class="text-white text-decoration-none px-4 py-1 rounded-4"
+              style="background-color:#4EADAF;">Inicia</a>
           </div>
         </div>
       </div>
@@ -70,7 +74,8 @@
     <h1 class="contact-title">CONTÁCTANOS</h1>
     <div class="info-container">
       <div class="form-container">
-        <form class="contact-form" id="contact-form" onsubmit="emailSend(); reset(); return false;">
+        <!--Inicio del formulario de contacto-->
+        <form class="contact-form" id="contact-form" onsubmit="">
           <div class="mb-3" id="field-nombre">
             <label for="nombre" class="form-label">Nombre</label>
             <input name="nombre" type="text" class="form-control" id="nombre" placeholder="Nombre" required>
@@ -88,13 +93,14 @@
           <p class="form_input-error" id="error-email">El correo electrónico no es válido.</p>
           <div class="mb-3">
             <label for="TextArea" class="form-label">Mensaje o sugerencia</label>
-            <textarea class="form-control" id="text" rows="3" required></textarea>
+            <textarea name="mensaje" class="form-control" id="text" rows="3" required></textarea>
           </div>
-          <button type="submit" class="btn-sumbit">Enviar</button>
-          <p class="submitted-form" id="submitted-form">¡Formulario enviado exitosamente!</p>
+          <button type="submit" id="button-submit" class="btn-sumbit">Enviar</button>
+          
         </form>
       </div>
 
+      <!--Ubicación con Google Maps-->
       <div class="map-container">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.7957164862232!2d-99.18411832604158!3d19.334668843803566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0002f7d821a3%3A0xd15664bd2552456!2sFacultad%20de%20Odontolog%C3%ADa%20UNAM!5e0!3m2!1ses-419!2smx!4v1723675116960!5m2!1ses-419!2smx"
@@ -110,14 +116,19 @@
     </div>
 
     <div class="whatsapp-icon">
-      <img class="whatsapp-logo" src="./assets/whatsapp.png">
+      <img class="whatsapp-logo" src="../assets/whatsapp.png">
     </div>
   </section>
 
+  <!--Script para validación de formulario-->
   <script src="./js/contacto.js"></script>
-  <!--<script src="/js/send-to-email.js"></script>-->
-  <!--<script src="https://smtpjs.com/v3/smtp.js"></script>-->
+  <!--Scripts para envío de información con EmailJS-->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
+  <script type="text/javascript">
+    emailjs.init('fjFMbSI0OTk77ypC9')
+  </script>
+  <!--Scripts de Bootstrap-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>

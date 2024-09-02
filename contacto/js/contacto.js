@@ -1,34 +1,42 @@
 const form = document.getElementById('contact-form');
-const inputs= document.querySelectorAll('#contact-form input');
+const inputs = document.querySelectorAll('#contact-form input');
 
 const expressions = {
-	nombre: /^[a-zA-ZÀ-ÿ\s]{3,100}$/, // Letras y espacios, pueden llevar acentos.
-	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-	telefono: /^\d{10,14}$/ // 10 a 14 números.
+    nombre: /^[a-zA-ZÀ-ÿ\s]{3,100}$/, // Letras y espacios, pueden llevar acentos.
+    email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+    telefono: /^\d{10,14}$/ // 10 a 14 números.
+}
+
+const fields = {
+    nombre: false,
+    email: false,
+    telefono: false
 }
 
 const validateForm = (e) => {
-    switch(e.target.name) {
+    switch (e.target.name) {
         case "nombre":
             validateInput(expressions.nombre, e.target, 'nombre');
-        break;
+            break;
         case "telefono":
             validateInput(expressions.telefono, e.target, 'telefono');
-        break;
+            break;
         case "email":
             validateInput(expressions.email, e.target, 'email');
-        break;
+            break;
         default:
             console.log("Ningún campo seleccionado");
     }
 }
 
 const validateInput = (expression, input, id) => {
-    if(expression.test(input.value)){
+    if (expression.test(input.value)) {
         console.log("Datos válidos");
         document.querySelector(`#error-${id}.form_input-error`).classList.remove('form_input-error-active');
+        fields[id] = true;
     } else {
         document.querySelector(`#error-${id}.form_input-error`).classList.add('form_input-error-active');
+        fields[id] = false;
     }
 }
 
@@ -37,32 +45,30 @@ inputs.forEach((input) => {
     input.addEventListener('blur', validateForm);
 });
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
+const btn = document.getElementById('button-submit');
+
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const success = document.getElementById("submitted-form");
+
+    if (fields.nombre && fields.email && fields.telefono) {
+        btn.value = 'Enviando...';
+
+        const serviceID = 'default_service';
+        const templateID = 'template_f2192bo';
+
+        emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+                btn.value = 'Enviar';
+                alert('¡Mensaje enviado correctamente!');
+            }, (err) => {
+                btn.value = 'Enviar';
+                alert(JSON.stringify(err));
+            });
+
+        form.reset();
+    }
 });
-
-function emailSend(){
-    var name = document.getElementById('nombre').value;
-    var phone = document.getElementById('telefono').value;
-    var email = document.getElementById('email').value;
-    var msg = document.getElementById('text').value;
-
-    var messageBody = "Nombre " + name + 
-    "<br/> Teléfono " + phone + 
-    "<br/> Email " + email +
-    "<br/> Mensaje " + msg;
-
-    Email.send({
-        Host : "smtp.elasticemail.com",
-        Username : "montserratcamch@gmail.com",
-        Password : "95E2633B477C5342A7BBF64001BE0868E360",
-        To : 'montserratcamch@gmail.com',
-        From : "montserratcamch@gmail.com",
-        Subject : "This is the subject",
-        Body : messageBody
-    }).then(
-      message => alert(message)
-    );    
-}
 
 
