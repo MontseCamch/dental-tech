@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicia Sesión</title>
+
+    <link rel="stylesheet" href="/dental-tech/InicioDeSesion/inicioSesion/Iniciasesion.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+ 
+    <form id="form">
+        <div class="form">
+            <h2>INICIA SESIÓN</h2>
+          <br>
+          <br>
+            <div class="grupo">
+              <div>
+                <label for="usuario">Correo electrónico</label>
+              </div>  
+              <br>
+                <input type="email" id="usuario" name="usuario" required>
+            </div>
+
+            <div class="grupo">
+              <div>
+                <label for="password">Contraseña</label>
+              </div>
+                <br>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div id="eyes">
+                <span id="open-eye" class="material-symbols-outlined">Ocultar contraseña</span>
+                <span id="closed-eye" class="material-symbols-outlined">Mostrar contraseña</span>
+            </div>
+
+            <br>
+
+            <button class="button" type="submit">ENVIAR</button>
+
+            <div class="register-link">
+                <p>No tengo una cuenta <a href="http://127.0.0.1:5500/creaCuenta/creaCuenta.html" class="register-lin">Regístrate</a></p>
+            </div>
+        </div>
+    </form>
+
+    <script src="./indexsesion.js"></script>
+</body>
+</html>
