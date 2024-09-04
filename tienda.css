@@ -3,14 +3,14 @@
 body {
    background-color: #000031 !important;
    color: #ffffff;
-   font-family: Arial, sans-serif;
-}
+   font-family: "Outfit", sans-serif !important;}
 
 /* Estilo del encabezado y barra de búsqueda */
 nav {
    justify-content: center !important;
 }
 .navbar {
+   font-family: "Kanit", sans-serif !important;
    background-color: #377a98 !important;
    justify-content: center;
 }
@@ -39,12 +39,19 @@ input[type="search"] {
    background-color: #000031;
 }
 /* Columna de botones */
+.col-md-3 {
+   font-family: "Kanit", sans-serif;
+}
+
 .btn-check:checked + .btn, .btn-check:active + .btn {
+   font-family: "Kanit", sans-serif;
    background-color: #80c4db;
    border-color: #80c4db;
 }
 
+
 .btn {
+   font-family: "Kanit", sans-serif;
    color: #ffffff;
    background-color: #4280b3;
    border: none;
@@ -52,6 +59,16 @@ input[type="search"] {
    margin-bottom: 10px;
    padding: 10px;
    text-align: center;
+}
+
+ .btn-container {
+   display: flex;
+   justify-content: flex-start; /* O 'center' si quieres centrarlos */
+  gap: 10px; /* Espacio entre los botones */
+  flex-wrap: wrap; /* Evita que se desborden */
+  padding: 10px;
+  max-width: 100%; /* Asegura que no se desborde */
+  box-sizing: border-box; /* Incluye el borde en el cálculo del tamaño */
 }
 
 
@@ -63,7 +80,7 @@ input[type="search"] {
    border-color: #ffffff !important; 
    border-radius: 10% !important;
    padding: 15px;
-   margin: 10px;
+   margin: auto;
    text-align: center;
 }
 
@@ -72,10 +89,6 @@ input[type="search"] {
    display: flex;
 }
 
-.btn-outline-danger {
- justify-content: right;
- display: flex;
-}
 
 .custom-card-bg {
    background-color: #000031 !important;
@@ -103,7 +116,21 @@ input[type="search"] {
    font-size: 16px;
    color: #ffffff;
 }
+.d-flex justify-content-end{
+   width: 100%;
+   padding: 10px;
+}
 
+#new-item-form {
+   color:#ffffff;
+   margin: auto;   
+   border-color:#ffffff;
+   border-style: double !important;
+   padding:20px;
+   max-width:600px;
+   box-sizing: border-box;
+   width: 100%;
+}
 /* Estilo del pie de página */
 footer {
    background-color: #6bc1c7;

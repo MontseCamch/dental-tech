@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="tienda.css">
   <script src="tienda.js" defer></script>
   <!-- Bootstrap -->
@@ -52,36 +55,55 @@
     </nav>
   
 <!-- Formulario para añadir nuevos productos -->
-<form id="new-item-form" style="display: none">         
-  <div class="mb-3">
-    <label for="item-category" class="form-label">Categoría</label>
-    <select class="form-select" id="item-category">
-      <option value="infantiles">Infantiles</option>
-      <option value="cepillos">Cepillos</option>
-      <option value="pastas">Pastas</option>
-      <option value="hiloDental">Hilo dental</option>
-      <option value="enjuagues">Enjuagues</option>
-    </select>
+<form id="new-item-form" class="container row mb-3" style="display: none">         
+  <div class="row mb-3">
+    <div class="form-new col-md-3 col-sm-3 col-lg-4">
+      <label for="item-category" class="form-label">Categoría</label>
+      <select class="form-select" id="item-category">
+        <option value="infantiles">Infantiles</option>
+        <option value="cepillos">Cepillos</option>
+        <option value="pastas">Pastas</option>
+        <option value="hiloDental">Hilo dental</option>
+        <option value="enjuagues">Enjuagues</option>
+      </select>
+    </div>
   </div>
-  <div class="mb-3">
-    <label for="item-title" class="form-label">Título</label>
-    <input type="text" class="form-control" id="item-title" placeholder="Título del producto">
+
+  <div class="row mb-4">
+    <div class="form-new col-md-3 col-sm-3 col-lg-4">
+      <label for="item-title" class="form-label">Título</label>
+      <input type="text" class="form-control" id="item-title" placeholder="Título del producto">
+    </div>
   </div>
-  <div class="mb-3">
-    <label for="item-price" class="form-label">Precio</label>
-    <input type="text" class="form-control" id="item-price"
-    placeholder="Precio del Producto">
+
+  <div class="row mb-4">
+    <div class="form-new col-md-3 col-sm-3 col-lg-4">
+      <label for="item-price" class="form-label">Precio</label>
+      <input type="text" class="form-control" id="item-price" placeholder="Precio del Producto">
+    </div>
   </div>
-  <div class="mb-3">
-    <label for="item-text" class="form-label">Descripción</label>
-    <input type="text" class="form-control" id="item-text" placeholder="Descripción del producto">
+
+  <div class="row mb-4">
+    <div class="form-new col-md-3 col-sm-3 col-lg-4">
+      <label for="item-text" class="form-label">Descripción</label>
+      <input type="text" class="form-control" id="item-text" placeholder="Descripción del producto">
+    </div>
   </div>
-  <div class="mb-3">
-    <label for="item-image" class="form-label">Añadir imagen</label>
+
+  <div class="row mb-4">
+    <div class="form-new col-md-3 col-sm-3 col-lg-4">
+      <label for="item-image" class="form-label">Añadir imagen</label>
       <input type="file" class="form-control" id="item-image" accept="image/*">
+    </div>
   </div>
-  <button type="submit" class="btn btn-outline-light">Agregar producto</button>
+
+  <div class="row mb-4">
+    <div class="col-md-3 col-sm-3 col-lg-4">
+      <button type="submit" class="btn btn-outline-light">Agregar producto</button>
+    </div>
+  </div>
 </form>
+
 
       <div class="container-fluid">
 

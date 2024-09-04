@@ -87,17 +87,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Botones dentro de las tarjetas para editar y eliminar
 const editButton = document.createElement('button');
-editButton.className = 'btn btn-outline-primary btn-sm me-2';
+editButton.className = 'btn btn-container btn-outline-primary btn-sm me-2';
 editButton.textContent = 'Editar';
 editButton.addEventListener('click', () => editarProducto(producto, col));
 
 const deleteButton = document.createElement('button');
-deleteButton.className = 'btn btn-outline-danger btn-sm';
+deleteButton.className = 'btn btn-container btn-outline-danger btn-sm';
 deleteButton.textContent = 'Eliminar';
 deleteButton.addEventListener('click', () => eliminarProducto(col));
 
 const buttonGroup = document.createElement('div');
 buttonGroup.className = 'd-flex justify-content-end';
+buttonGroup.className = `btn-container d-flex justify-content-beetwen`;
 buttonGroup.appendChild(editButton);
 buttonGroup.appendChild(deleteButton);
 
