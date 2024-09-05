@@ -68,11 +68,24 @@ input[type="search"] {
 .contador {
    color: #000031;
 position: absolute;
-top:-10;
+
 background-color: #ffffff;
 padding: 5px 10px;
 border-radius: 50%;
 font-size: 16px;
+animation: pulsation 1s infinite;
+}
+
+@keyframes pulsation{
+   0% {
+      transform: scale(1);
+   }
+   50% {
+      transform: scale(1.2);
+   }
+   100% {
+      transform: scale(1);
+   }
 }
 
 .btn {
