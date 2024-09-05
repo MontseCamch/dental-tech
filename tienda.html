@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="tienda.css">
   <script src="tienda.js" defer></script>
   <!-- Bootstrap -->
@@ -28,19 +31,20 @@
         </div>
         <div class="d-flex justify-content-center w-100 mt-2">
 
-          <button id="agregar-producto" class="btn btn-outline-light btn-sm float-start  mb-2">
-            Añadir <span id="toggle-arr"> ▼ </span></button>
+          <button id="agregar-producto" class="btn btn-outline-light btn-sm float-start  mb-2">Añadir</button>
 
           <form class="d-flex" role="search" style="width: 50%;">
             <input class="form-control mb-2 me-3 ms-3" type="search" placeholder="Buscar" aria-label="Search">
             <button class="btn btn-outline-light btn-sm me-3" type="submit">Search</button>
           </div>
           </form>
-          <button id="carrito" class="btn btn-outline-light btn-sm mb-2 ms-3">
-            Añadir al carrito</button>
+          <span class="notice-icon">
+            <i class="bi bi-cart4 fs-1 text-light"></i>
+              <span class="contador">0</span>
+              </span>
 
             <div class="dropdown"> <!--Botón desplegable para el filtro-->
-          <button id="ordenar" class="dropbtn btn btn-outline-light btn-sm float-left">Ordenar por<span id="arrow"> ▼ </span></button>
+          <button id="ordenar" class="dropbtn btn btn-outline-light btn-sm float-left">Ordenar por</button>
           <div class="dropdown-content">
             <a href="#" style="color: white;">Más reciente</a>
             <a href="#"  style="color: white;">Más vendido</a>
@@ -52,36 +56,55 @@
     </nav>
   
 <!-- Formulario para añadir nuevos productos -->
-<form id="new-item-form" style="display: none">         
-  <div class="mb-3">
-    <label for="item-category" class="form-label">Categoría</label>
-    <select class="form-select" id="item-category">
-      <option value="infantiles">Infantiles</option>
-      <option value="cepillos">Cepillos</option>
-      <option value="pastas">Pastas</option>
-      <option value="hiloDental">Hilo dental</option>
-      <option value="enjuagues">Enjuagues</option>
-    </select>
+<form id="new-item-form" class="container row mb-3" style="display: none">         
+  <div class="row mb-3">
+    <div class="form-new col-md-3 col-sm-3 col-lg-4">
+      <label for="item-category" class="form-label">Categoría</label>
+      <select class="form-select" id="item-category">
+        <option value="infantiles">Infantiles</option>
+        <option value="cepillos">Cepillos</option>
+        <option value="pastas">Pastas</option>
+        <option value="hiloDental">Hilo dental</option>
+        <option value="enjuagues">Enjuagues</option>
+      </select>
+    </div>
   </div>
-  <div class="mb-3">
-    <label for="item-title" class="form-label">Título</label>
-    <input type="text" class="form-control" id="item-title" placeholder="Título del producto">
+
+  <div class="row mb-4">
+    <div class="form-new col-md-3 col-sm-3 col-lg-4">
+      <label for="item-title" class="form-label">Título</label>
+      <input type="text" class="form-control" id="item-title" placeholder="Título del producto">
+    </div>
   </div>
-  <div class="mb-3">
-    <label for="item-price" class="form-label">Precio</label>
-    <input type="text" class="form-control" id="item-price"
-    placeholder="Precio del Producto">
+
+  <div class="row mb-4">
+    <div class="form-new col-md-3 col-sm-3 col-lg-4">
+      <label for="item-price" class="form-label">Precio</label>
+      <input type="text" class="form-control" id="item-price" placeholder="Precio del Producto">
+    </div>
   </div>
-  <div class="mb-3">
-    <label for="item-text" class="form-label">Descripción</label>
-    <input type="text" class="form-control" id="item-text" placeholder="Descripción del producto">
+
+  <div class="row mb-4">
+    <div class="form-new col-md-3 col-sm-3 col-lg-4">
+      <label for="item-text" class="form-label">Descripción</label>
+      <input type="text" class="form-control" id="item-text" placeholder="Descripción del producto">
+    </div>
   </div>
-  <div class="mb-3">
-    <label for="item-image" class="form-label">Añadir imagen</label>
+
+  <div class="row mb-4">
+    <div class="form-new col-md-3 col-sm-3 col-lg-4">
+      <label for="item-image" class="form-label">Añadir imagen</label>
       <input type="file" class="form-control" id="item-image" accept="image/*">
+    </div>
   </div>
-  <button type="submit" class="btn btn-outline-light">Agregar producto</button>
+
+  <div class="row mb-4">
+    <div class="col-md-3 col-sm-3 col-lg-4">
+      <button type="submit" class="btn btn-outline-light">Agregar producto</button>
+    </div>
+  </div>
 </form>
+
 
       <div class="container-fluid">
 
@@ -118,15 +141,21 @@
           </div>
         </div>
       </div>
+
+      
     
       <!-- Tarjetas dinámicas -->
       <div class="col-md-9">
         <div class="row row-cols-2 row-cols-md-4 flex-grow-1" id="card-container">
           <!-- Aquí se insertarán dinámicamente las tarjetas -->
+           
         </div>
       </div>
+      
     </div>
   </div>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 </body>

@@ -2,7 +2,7 @@ const bancoDeImagenes = {
 
   infantiles: ['img/children0.jpeg', 'img/children1.jpeg', 'img/children2.jpeg', 'img/children3.jpeg', 'img/children4.jpeg', 'img/children5.jpeg', 'img/children7.jpeg', 'img/children8.jpeg'],
 
-  cepillos: ['img/toothbrush0.jpg', 'img/toothbrush1.jpeg', 'img/toothbrush2.jpeg', 'img/toothbrush3.jpeg', 'img/toothbrush4.jpeg', 'img/toothbrush5.jpeg', 'img/toothbrush6.jpeg', 'img/toothbrush7.jpeg', 'img/toothbrush8.jpeg'],
+  cepillos: ['img/toothbrush0.jpeg', 'img/toothbrush1.jpeg', 'img/toothbrush2.jpeg', 'img/toothbrush3.jpeg', 'img/toothbrush4.jpeg', 'img/toothbrush5.jpeg', 'img/toothbrush6.jpeg', 'img/toothbrush7.jpeg', 'img/toothbrush8.jpeg'],
 
   pastas: ['img/toothpaste0.jpeg', 'img/toothpaste1.jpeg', 'img/toothpaste2.jpeg', 'img/toothpaste3.jpeg', 'img/toothpaste4.jpeg', 'img/toothpaste5.jpeg','img/toothpaste6.jpeg', 'img/toothpaste7.jpeg', 'img/toothpaste8.jpeg'],
 
@@ -79,27 +79,42 @@ document.addEventListener('DOMContentLoaded', function() {
 
       const cardPrice = document.createElement('h4');
       cardPrice.className = 'card-price';
-      cardPrice.textContent = `$ ${precio !== null ? precio : generarPrecio(70, 150)}`; //genera un precio entre 70 y 150
+
+      const finalPrice = `$${precio !== null ? precio : generarPrecio(70, 150)}`; //genera un precio entre 70 y 150
+      cardPrice.textContent = `${finalPrice}`;
 
       const cardText = document.createElement('p');
       cardText.className = 'card-text';
       cardText.textContent = producto.text; //Descripción 
 
+      
+
 // Botones dentro de las tarjetas para editar y eliminar
 const editButton = document.createElement('button');
-editButton.className = 'btn btn-outline-primary btn-sm me-2';
+editButton.className = 'btn btn-container btn-outline-primary btn-sm me-2';
 editButton.textContent = 'Editar';
 editButton.addEventListener('click', () => editarProducto(producto, col));
 
 const deleteButton = document.createElement('button');
-deleteButton.className = 'btn btn-outline-danger btn-sm';
+deleteButton.className = 'btn btn-container btn-outline-danger btn-sm';
 deleteButton.textContent = 'Eliminar';
 deleteButton.addEventListener('click', () => eliminarProducto(col));
 
+const addToCartButton = document.createElement('button');
+  addToCartButton.className = 'btn btn-container btn-outline-info btn-sm';
+  
+  const cartIcon = document.createElement(`i`);
+  cartIcon.className = `bi bi-cart4 fs-4`;
+  addToCartButton.appendChild(cartIcon);
+  
+  addToCartButton.addEventListener('click', () => agregarAlCarrito(producto, finalPrice));
+
 const buttonGroup = document.createElement('div');
 buttonGroup.className = 'd-flex justify-content-end';
+buttonGroup.className = `btn-container d-flex justify-content-beetwen`;
 buttonGroup.appendChild(editButton);
 buttonGroup.appendChild(deleteButton);
+buttonGroup.appendChild(addToCartButton);
 
       cardBody.appendChild(cardTitle);
       cardBody.appendChild(cardPrice);
@@ -189,13 +204,45 @@ function eliminarProducto(col) {
       // Alterna la visibilidad del formulario
       if (form.style.display === 'none' || form.style.display === '') {
         form.style.display = 'block';
-        arrow.textContent = '▲'; // Cambia la flecha hacia arriba
+        // Cambia la flecha hacia arriba
       } else {
         form.style.display = 'none';
-        arrow.textContent = '▼'; // Cambia la flecha hacia abajo
+        // Cambia la flecha hacia abajo
       }
     
     });
+
+    let carrito = [];
+    let contadorGlobal = 0; //contador para notificar los productos agregados
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelector('.contador').textContent = contadorGlobal;
+  });
+
+    //agregar los productos al carrito
+function agregarAlCarrito(producto, precio) {
+    const productoCarrito = {
+        title: producto.title,
+        price: precio,
+        category: producto.category,
+        quantity: 1
+    };
+
+    // Verifica si el producto ya está en el carrito
+    const productoExistente = carrito.find(item => item.title === productoCarrito.title);
+
+    if (productoExistente) {
+        productoExistente.quantity++;  // Si ya existe, incrementa la cantidad
+    } else {
+        carrito.push(productoCarrito);  // Si no existe, lo agrega al carrito
+    }
+    contadorGlobal++;
+    document.querySelector(`.contador`).textContent = contadorGlobal;
+
+    console.log("Carrito actualizado:", producto.title, productoCarrito.price);
+    
+}
+
 
     document.getElementById("new-item-form").addEventListener("submit", function(event) {
       event.preventDefault();
