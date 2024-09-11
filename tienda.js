@@ -23,10 +23,41 @@ document.addEventListener('DOMContentLoaded', function() {
     dropbtn.addEventListener('click', function() {
         const dropdownContent = document.querySelector('.dropdown-content');
         dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+
     });
 
+//barra de búsqueda
+function buscarTarjetas(query) {
+
+      const cards = document.querySelectorAll('#card-container .col');
+      let resultados = 0;
+
+      cards.forEach(card => {
+          const title = card.querySelector('.card-title').textContent.toLowerCase();
+          const description = card.querySelector('.card-text').textContent.toLowerCase();
+
+          if (title.includes(query.toLowerCase()) || description.includes(query.toLowerCase())) {
+              card.style.display = 'block';
+              resultados++;
+          } else {
+              card.style.display = 'none';
+          }
+      });
+  }
+
+document.getElementById('search-btn').addEventListener('click', function(event) {
+      event.preventDefault();
+      const searchQuery = document.getElementById('search').value;
+      buscarTarjetas(searchQuery);
+  });
+
+  // Inicializar mostrando todas las tarjetas por defecto
+filterCards('all');
+
+    
+
     // Cierra el menú desplegable si se hace clic fuera de él
-    window.addEventListener('click', function(e) {
+window.addEventListener('click', function(e) {
         if (!e.target.matches('.dropbtn')) {
             const dropdownContent = document.querySelector('.dropdown-content');
             if (dropdownContent.style.display === 'block') {
@@ -36,7 +67,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-    const productos = [ //ordenamiento por categorias con un texto predeterminado
+const productos = [ //ordenamiento por categorias con un texto predeterminado
+
       { category: 'infantiles', title: 'Producto Infantil', text: 'Ideales para los pequeños del hogar.' },
       { category: 'cepillos', title: 'Cepillo de Dientes', text: 'Cepillo de alta calidad.'},
       { category: 'pastas', title: 'Pasta Dental', text: 'Protege tus dientes.' },
@@ -44,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
       { category: 'enjuagues', title: 'Enjuague Bucal', text: 'Refresca tu aliento.' }
     ];
 
-    function generarPrecio(min, max) {
+function generarPrecio(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min; //Genera un precio aleatorio por tarjeta y redondea el número 
     }
 
@@ -57,7 +89,9 @@ document.addEventListener('DOMContentLoaded', function() {
         return imagenes.splice(indiceAleatorio, 1)[0];
     }
 
-    function crearTarjeta(producto, precio = null) { //comienza a generar tarjetas dinamicamente
+    
+function crearTarjeta(producto, precio = null) { //comienza a generar tarjetas dinamicamente
+
       const col = document.createElement('div');
       col.className = 'col mb-4';
       col.setAttribute('data-category', producto.category);
@@ -204,10 +238,10 @@ function eliminarProducto(col) {
       // Alterna la visibilidad del formulario
       if (form.style.display === 'none' || form.style.display === '') {
         form.style.display = 'block';
-        // Cambia la flecha hacia arriba
+      
       } else {
         form.style.display = 'none';
-        // Cambia la flecha hacia abajo
+        
       }
     
     });
@@ -244,8 +278,8 @@ function agregarAlCarrito(producto, precio) {
 }
 
 
-    document.getElementById("new-item-form").addEventListener("submit", function(event) {
-      event.preventDefault();
+document.getElementById("new-item-form").addEventListener("submit", function(event) {
+  event.preventDefault();
  
       const alertContainer = document.querySelector('.alert-container'); // Contenedor de alerta
       alertContainer.innerHTML = ''; 
@@ -289,5 +323,6 @@ function agregarAlCarrito(producto, precio) {
       this.style.display = "none";
 
       filterCards('all'); 
+      
     });
 });

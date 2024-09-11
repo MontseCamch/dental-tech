@@ -61,6 +61,11 @@ input[type="search"] {
    display:block;
 }
 
+a{
+   text-decoration: none !important;
+   font-size: 14px;
+}
+
 .notice-icon{
    color: #ffff;
 }
