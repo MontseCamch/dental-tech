@@ -130,8 +130,8 @@ editButton.textContent = 'Editar';
 editButton.addEventListener('click', () => editarProducto(producto, col));
 
 const deleteButton = document.createElement('button');
-deleteButton.className = 'btn btn-container btn-outline-danger btn-sm';
-deleteButton.textContent = 'Eliminar';
+deleteButton.className = 'btn btn-container btn-outline-danger btn-sm me-2';
+deleteButton.textContent = 'Borrar';
 deleteButton.addEventListener('click', () => eliminarProducto(col));
 
 const addToCartButton = document.createElement('button');

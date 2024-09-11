@@ -92,28 +92,43 @@ animation: pulsation 1s infinite;
       transform: scale(1);
    }
 }
+.card-container {
+   width: 100%; /* Se ajusta al ancho de su contenedor padre */
+   max-width: 300px; /* Limita el ancho de la tarjeta */
+   padding: 20px;
+   border: 1px solid #ccc;
+   border-radius: 10px;
+   box-sizing: border-box;
+   overflow: hidden; 
+}
 
 .btn {
+   flex: 1;
    font-family: "Kanit", sans-serif;
+   display: flex;
    color: #ffffff;
-   background-color: #4280b3;
    border: none;
-   border-radius: 5px;
+   border-radius: 20%;
    margin-bottom: 10px;
    padding: 10px;
    text-align: center;
+   min-height: 25px;
+   min-width: 50px;
 }
 
  .btn-container {
   display: flex;
-  justify-content: flex-start; 
-  gap: 10px; /* Espacio entre los botones */
+  justify-content:flex-start; 
+  gap: 5px; /* Espacio entre los botones */
   flex-wrap: wrap; /* Evita que se desborden */
   padding: 10px;
-  max-width: 100%; /* Asegura que no se desborde */
+  max-width: 100%;
+ height: auto;/* Asegura que no se desborde */
   box-sizing: border-box; 
   border-radius: 20%;/* Incluye el borde en el cálculo del tamaño */
 }
+
+
 .bi bi-cart4 {
    width: 20px;
 }
