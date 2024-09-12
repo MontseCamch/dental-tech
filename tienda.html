@@ -30,24 +30,25 @@
           
         </div>
         <div class="d-flex justify-content-center w-100 mt-2">
-
+<div class="text col-md-2 me-3 ms-2 border-none px-3 col-sm-2">
           <p>¿Qué estás buscando?</p>
-
-          <button id="agregar-producto" class="btn btn-outline-light btn-sm float-start  mb-2">Añadir</button>
+</div>
+          <button id="agregar-producto" class="btn col-md-1 btn-upload btn-outline-light btn-sm mb-2">Añadir</button>
 
           <form class="d-flex" role="search" style="width: 100%;">
             <input id="search" class="form-control mb-2 me-3 ms-3" type="search" placeholder="Buscar" aria-label="Search">
-            <button id="search-btn" class="btn btn-search btn-outline-light me-3" type="button">Search</button>
+            <button id="search-btn" class="btn col-md-1 btn-search btn-outline-light btn-sm me-3" type="button">Search</button>
           </div>
           
           <div class="dropdown"> <!--Botón desplegable para el filtro-->
-            <button id="ordenar" class="dropbtn btn btn-outline-light btn-sm">Ordenar por</button>
+            <button id="ordenar" class="dropbtn btn btn-outline-light btn-sm"type="button">Ordenar por</button>
             <div class="dropdown-content">
               <a href="#" style="color: white;">Más reciente</a>
               <a href="#"  style="color: white;">Más vendido</a>
               <a href="#"  style="color: white;">Precio</a>
             </div>
           </div>
+
           </form>
           <span class="notice-icon">
             <i class="bi bi-cart4 fs-1 text-light"></i>
@@ -150,7 +151,6 @@
       <!-- Tarjetas dinámicas -->
       <div class="col-md-9">
         <div class="row row-cols-2 row-cols-md-4 flex-grow-1" id="card-container">
-          
           <!-- Aquí se insertarán dinámicamente las tarjetas -->
              <!-- Div para mostrar los resultados -->
 

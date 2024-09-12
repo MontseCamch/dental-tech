@@ -19,6 +19,7 @@ nav {
    color:#ffffff;
    font-size: 18px;
    display: flex !important;
+   justify-content: flex-start;
 }
 
 
@@ -34,6 +35,13 @@ input[type="search"] {
    background-color: #000031;
    padding: 20px;
 }
+
+form .d-flex {
+display:flex;
+flex-wrap:wrap;
+justify-content: center;
+}
+
 
 .row{
    background-color: #000031;
@@ -127,6 +135,14 @@ animation: pulsation 1s infinite;
   box-sizing: border-box; 
   border-radius: 20%;/* Incluye el borde en el cálculo del tamaño */
 }
+
+.btn-upload, .btn-search {
+ border-radius: 20%;
+ white-space:nowrap;
+ overflow:hidden;
+ display: inline-block;    /* Bordes redondeados para ambos */
+}
+
 
 
 .bi bi-cart4 {
