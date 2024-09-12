@@ -126,12 +126,12 @@ function crearTarjeta(producto, precio = null) { //comienza a generar tarjetas d
 // Botones dentro de las tarjetas para editar y eliminar
 const editButton = document.createElement('button');
 editButton.className = 'btn btn-container btn-outline-primary btn-sm me-2';
-editButton.textContent = 'Editar';
+editButton.innerHTML = '<i class="bi bi-pen-fill"></i>'
 editButton.addEventListener('click', () => editarProducto(producto, col));
 
 const deleteButton = document.createElement('button');
 deleteButton.className = 'btn btn-container btn-outline-danger btn-sm me-2';
-deleteButton.textContent = 'Borrar';
+deleteButton.innerHTML = '<i class="bi bi-trash"></i>'
 deleteButton.addEventListener('click', () => eliminarProducto(col));
 
 const addToCartButton = document.createElement('button');
