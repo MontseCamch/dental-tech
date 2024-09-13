@@ -17,7 +17,7 @@ nav {
 
 span {
    color: #ffffff;
-   font-size: 16px;
+   font-size: 20px;
    font-family: "outfit" sans-serif;
 }
 
@@ -60,7 +60,7 @@ justify-content: center;
    background-color:  #000031;
    min-width: 160px;
    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-   padding: 12px 16px;
+   padding: 16px 16px;
    z-index: 1;
    flex-direction: column; /* Agrega esta propiedad para mostrar el menú en vertical */
  }
@@ -102,7 +102,7 @@ animation: pulsation 1s infinite;
 .card-container {
    width: 100%; /* Se ajusta al ancho de su contenedor padre */
    max-width: 300px; /* Limita el ancho de la tarjeta */
-   padding: 20px;
+   padding: 15px;
    border: 1px solid #ccc;
    border-radius: 10px;
    box-sizing: border-box;
