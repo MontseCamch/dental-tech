@@ -1,13 +1,9 @@
 const bancoDeImagenes = {
 
   infantiles: ['img/children0.jpeg', 'img/children1.jpeg', 'img/children2.jpeg', 'img/children3.jpeg', 'img/children4.jpeg', 'img/children5.jpeg', 'img/children7.jpeg', 'img/children8.jpeg'],
-
   cepillos: ['img/toothbrush0.jpeg', 'img/toothbrush1.jpeg', 'img/toothbrush2.jpeg', 'img/toothbrush3.jpeg', 'img/toothbrush4.jpeg', 'img/toothbrush5.jpeg', 'img/toothbrush6.jpeg', 'img/toothbrush7.jpeg', 'img/toothbrush8.jpeg'],
-
   pastas: ['img/toothpaste0.jpeg', 'img/toothpaste1.jpeg', 'img/toothpaste2.jpeg', 'img/toothpaste3.jpeg', 'img/toothpaste4.jpeg', 'img/toothpaste5.jpeg','img/toothpaste6.jpeg', 'img/toothpaste7.jpeg', 'img/toothpaste8.jpeg'],
-
   hiloDental: ['img/dentalfloss0.jpeg', 'img/dentalfloss1.jpeg', 'img/dentalfloss2.jpeg', 'img/dentalfloss3.jpeg', 'img/dentalfloss4.jpeg', 'img/dentalfloss5.jpeg', 'img/dentalfloss6.jpeg', 'img/dentalfloss7.png', 'img/dentalfloss8.jpeg'],
-
   enjuagues: ['img/mouthwash0.jpeg', 'img/mouthwash2.jpeg', 'img/mouthwash3.jpeg', 'img/mouthwash4.jpeg', 'img/mouthwash5.jpeg', 'img/mouthwash6.jpeg', 'img/mouthwash7.jpeg', 'img/mouthwash8.jpeg']
 }; //Declaracion de los productos que se mostraran en las tarjetas
 
@@ -69,7 +65,7 @@ window.addEventListener('click', function(e) {
 
 const productos = [ //ordenamiento por categorias con un texto predeterminado
 
-      { category: 'infantiles', title: 'Producto Infantil', text: 'Ideales para los pequeños del hogar.' },
+      { category: 'infantiles', title: 'Producto Infantil', text: 'Los mejor para niños.' },
       { category: 'cepillos', title: 'Cepillo de Dientes', text: 'Cepillo de alta calidad.'},
       { category: 'pastas', title: 'Pasta Dental', text: 'Protege tus dientes.' },
       { category: 'hiloDental', title: 'Hilo Dental', text: 'Mantén tu boca limpia.' },
@@ -97,7 +93,7 @@ function crearTarjeta(producto, precio = null) { //comienza a generar tarjetas d
       col.setAttribute('data-category', producto.category);
 
       const card = document.createElement('div');
-      card.className = 'card h-100 custom-card-bg';
+      card.className = 'card h-80 custom-card-bg';
       
       const img = document.createElement('img');
       img.className = 'card-img-top';
@@ -111,7 +107,7 @@ function crearTarjeta(producto, precio = null) { //comienza a generar tarjetas d
       cardTitle.className = 'card-title';
       cardTitle.textContent = producto.title; //nombre del prodcuto
 
-      const cardPrice = document.createElement('h4');
+      const cardPrice = document.createElement('h2');
       cardPrice.className = 'card-price';
 
       const finalPrice = `$${precio !== null ? precio : generarPrecio(70, 150)}`; //genera un precio entre 70 y 150
@@ -138,7 +134,7 @@ const addToCartButton = document.createElement('button');
   addToCartButton.className = 'btn btn-container btn-outline-info btn-sm';
   
   const cartIcon = document.createElement(`i`);
-  cartIcon.className = `bi bi-cart4 fs-4`;
+  cartIcon.className = `bi btn-sm bi-cart4 fs-4`;
   addToCartButton.appendChild(cartIcon);
   
   addToCartButton.addEventListener('click', () => agregarAlCarrito(producto, finalPrice));
@@ -232,8 +228,11 @@ function eliminarProducto(col) {
 }
     // Mostrar el formulario de agregar producto al hacer clic en el botón
     document.getElementById('agregar-producto').addEventListener('click', function() {
+
+      document.getElementById("close-form").addEventListener("click", function() {
+        document.getElementById("new-item-form").style.display = "none";
+      });
       const form = document.getElementById('new-item-form');
-      const arrow = document.getElementById('toggle-arrow');
 
       // Alterna la visibilidad del formulario
       if (form.style.display === 'none' || form.style.display === '') {
@@ -281,8 +280,11 @@ function agregarAlCarrito(producto, precio) {
 document.getElementById("new-item-form").addEventListener("submit", function(event) {
   event.preventDefault();
  
-      const alertContainer = document.querySelector('.alert-container'); // Contenedor de alerta
-      alertContainer.innerHTML = ''; 
+      const alertErrorContainer = document.querySelector('.alert-container-error'); // Contenedor de alerta de error
+      const alertSuccessContainer = document.querySelector('.alert-container-success');// Contenedor de alerta de éxito
+
+      alertErrorContainer.innerHTML = ''; 
+      alertSuccessContainer.innerHTML = ''; 
       //Funcion para llenar la informacion requerida del producto nuevo
       const category = document.getElementById("item-category").value;
       const title = document.getElementById("item-title").value.trim();
@@ -291,16 +293,16 @@ document.getElementById("new-item-form").addEventListener("submit", function(eve
       const imageFile = document.getElementById("item-image").files[0]; 
       
       if (!category || !title || !price || !text) { //Añadir una imagen es opcional, de no hacerlo se tomara una imagen dentro de la carpeta 
-        alertContainer.innerHTML = `
+        alertErrorContainer.innerHTML = `
           <div class="alert alert-warning alert-dismissible fade show" role="alert">
-            <strong>Error:</strong> Por favor, completa los campos necesarios(La imagen es opcional).
+            <strong>Error:</strong> Por favor, completa los campos necesarios (La imagen es opcional).
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>`; //contenedor de alerta con formato de boostrap
         return;
       }
 
       if (isNaN(price) || Number(price) <= 0) { //verifica que el precio tenga un valor mayor que cero y que sea un valor numérico
-        alertContainer.innerHTML = `
+        alertErrorContainer.innerHTML = `
           <div class="alert alert-danger alert-dismissible fade show" role="alert">
             <strong>Error:</strong> Ingresa un precio válido.
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -313,6 +315,11 @@ document.getElementById("new-item-form").addEventListener("submit", function(eve
       //Si no se añade una imagen, toma una dentro de la carpeta
 
       console.log("Descripción del producto", JSON.stringify(nuevoProducto));
+
+      alertSuccessContainer.innerHTML= `<div class="alert alert-info ms-2 mb-0 d-flex" role="alert">
+      ¡Producto añadido éxitosamente! 
+      <button type="button" class="btn-close ms-3" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>`;
         
       productosGuardados.push(nuevoProducto);
       //Se crea una tarjeta con el producto añadido
