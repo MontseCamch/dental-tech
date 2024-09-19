@@ -142,6 +142,7 @@ const addToCartButton = document.createElement('button');
 const buttonGroup = document.createElement('div');
 buttonGroup.className = 'd-flex justify-content-end';
 buttonGroup.className = `btn-container d-flex justify-content-beetwen`;
+
 buttonGroup.appendChild(editButton);
 buttonGroup.appendChild(deleteButton);
 buttonGroup.appendChild(addToCartButton);
@@ -150,8 +151,10 @@ buttonGroup.appendChild(addToCartButton);
       cardBody.appendChild(cardPrice);
       cardBody.appendChild(cardText);
       cardBody.appendChild(buttonGroup);
+      
       card.appendChild(img);
       card.appendChild(cardBody);
+      
       col.appendChild(card);
       return col;
     }
