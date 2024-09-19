@@ -215,9 +215,6 @@ function editarProducto(producto, col) {
         producto.price = parseFloat(document.getElementById("item-price").value);
         producto.text = document.getElementById("item-text").value;
 
-        // Crear la nueva tarjeta actualizada
-        const nuevaTarjeta = crearTarjeta(producto, producto.price);
-        cardContainer.appendChild(nuevaTarjeta);
 
         this.reset();
         this.style.display = "none";
