@@ -106,6 +106,8 @@ document.addEventListener('DOMContentLoaded', function () {
             alertElement.classList.remove('fade');
         }
 
+        window.location.href = "../contacto/contacto.html";
+
 
     });
 });

@@ -55,6 +55,14 @@
       "password": "ka-258",
       "telefono": "5502106070",
       "nacimiento": "1960-09-19"
+    },
+    {
+      "id": "d546",
+      "nombre": "Laura",
+      "correo": "laura@mail.com",
+      "password": "laura_24",
+      "telefono": "5520136945",
+      "nacimiento": "1992-03-30"
     }
   ]
 }
