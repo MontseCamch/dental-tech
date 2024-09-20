@@ -1,102 +1,319 @@
 body {
-  background-color:#000031;
+  background-color: #000031;
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit", sans-serif;
 }
 
-.container-fluid {
-  width: 95%;
+.navbar{
+  background-color: #69C6AF;
 }
 
-@media (max-width: 1024px){
-  .sidebar {
-    background-color: transparent;
-    backdrop-filter: blur(70px);
-  }}
+.servicios{
+  color: white; 
+  margin-top: 80px;
+  text-align: center;
+}
+
+.parrafo {
+  color: white;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.tratamientos .col {
+  border: none;
+  margin: 10px 0;
+}
+
+.tratamientos .card {
+  border: none;
+}
+
+.img-container {
+  position: relative;
+}
+
+.img-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.img-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #69C6AF;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.img-container:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h5 {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.container-full-width {
+  width: 90vw;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+
+
+
+
+/* Media Queries */
 
 /* Desktop */
 @media (min-width: 1024px) {
   .home-title {
-    font-family: "Outfit", sans-serif;
-    font-size: 6em;
-    padding-left: 10%;
-    padding-right: 10%;
-    color: white; 
+    font-size: 4em;
   }
   .home-subtitle {
-    font-family: "Outfit", sans-serif;
-    font-size: 2.2em;
-    padding-left: 10%;
-    padding-right: 20%;
-    color: white;
+    font-size: 1.5em;
   }
 }
 
 /* Tablet */
-@media (min-width: 768px) and (max-width: 1023px)  { 
+@media (min-width: 768px) and (max-width: 1023px) {
   .home-title {
-    font-family: "Outfit", sans-serif;
     font-size: 3.5em;
-    padding-left: 10%;
-    padding-right: 10%;
-    color: white; 
   }
   .home-subtitle {
-    font-family: "Outfit", sans-serif;
     font-size: 1.2em;
-    padding-left: 10%;
-    padding-right: 5%;
-    color: white;
   }
 }
 
-/* Movil */
-@media (max-width: 767px) { 
+/* Mobile */
+@media (max-width: 767px) {
+  .container-full-width {
+    width: 95vw;
+  }
+
   .home-title {
-    font-family: "Outfit", sans-serif;
     font-size: 2em;
-    padding-left: 10%;
-    padding-right: 10%;
-    color: white; 
   }
+
   .home-subtitle {
-    font-family: "Outfit", sans-serif;
     font-size: 0.8em;
-    padding-left: 10%;
-    padding-right: 20%;
-    color: white;
   }
 }
 
-.navbar, .text-white {
-  font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+.beneficios-section {
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  margin-left: 30px;
+  margin-top: 60px;
 }
 
- .text-white{
-  font-size: 1.1em;
- }
+.lista-beneficios {
+  list-style: none;
+  padding: 0;
+}
 
- .carousel, .mockup{
-  margin-bottom: 100px;
- }
+.lista-beneficios li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
 
- .mascota {
-  padding-left: 10%;
- }
+.lista-beneficios .icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+  overflow: hidden; /* Oculta cualquier desbordamiento */
+  max-width: 100%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none; /* Remueve los bordes del iframe */
+}
 
 
- .container-full-width {
-  width: 90vw;
+@media (max-width: 768px) {
+  .video-container {
+    max-width: 100%; /* Asegura que el video se ajuste en pantallas pequeñas */
+  }
+}
+
+.footer-container {
+  background-color: #69C6AF;
+  color: white;
+  padding: 40px 0;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+}
+
+.footer-container .social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.footer-container .social-icons a img {
+  width: 35px;
+  height: 35px;
+}
+
+.footer-container .social-icons a:hover {
+  transform: scale(1.2);
+}
+
+.footer-container .logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-container .footer-logo {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.footer-container p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.footer-container .horarios {
+  text-align: right;
+}
+
+.footer-container .horarios h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-container .horarios p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .footer-container .horarios {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .footer-container .social-icons {
+    text-align: center;
+  }
+}
+
+.faq-parallax {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  overflow: hidden; /* Evita que el contenido se desborde */
+  position: relative;
 }
-
-.mascota img {
-  position: absolute;
-  width: 40%;
+#Preguntas {
+  margin-bottom: 30px;
 }
-
-.text-content {
-  width: 50%;
+.faq-content {
+  width: 50%; /* Las preguntas ocuparán el 50% a la izquierda */
   padding: 20px;
+  z-index: 1; /* Para asegurarse de que el contenido esté sobre la imagen */
+  background-color: none; 
+  color: white;/* Fondo blanco translúcido para las preguntas */
 }
+
+.faq-image {
+  width: 50%; 
+  background-image: url('/dental-tech/Navbar/Imagenes/DoctorFondo.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px; /* Ajusta la altura según lo necesario */
+  position: relative;
+  right: 0;
+  top: 0;
+  background-attachment: scroll; /* Sin parallax */
+}
+
+.faq {
+  margin-bottom: 20px;
+}
+
+.faq-question {
+  background-color: #377A98;
+  color: white;
+  padding: 15px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  text-align: left;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.faq-question:hover {
+  background-color: #cfe9eb;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.faq.active .faq-answer {
+  max-height: 100px; /* Ajusta según el contenido */
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+  .faq-parallax {
+    flex-direction: column; /* Cambia a columna para pantallas pequeñas */
+  }
+
+  .faq-content, .faq-image {
+    width: 100%;
+    height: auto; /* Ajuste automático de altura */
+  }
+
+  .faq-image {
+    position: relative; /* Para móviles, quitar efecto absoluto */
+    background-attachment: scroll; /* Desactivar parallax en móviles */
+  }
+}
+
