@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contáctenos</title>
+  <link rel="stylesheet" href="contacto.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><!--Tipografía Outfit-->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body class="contact">
+  <!--NavBar-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+    <div class="container-fluid">
+      <!--Logo-->
+      <a class="navbar-brand" href="#">
+        <img src="../assets/LogoV1.png" alt="Logo" width="45" height="48"
+          class="navbar-brand fs-4 d-inline-block align-text-center">Dental-Tech</a>
+      <!--Barra lateral Btn-->
+      <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel">
+
+        <!--Barra lateral encabezado-->
+        <div class="offcanvas-header text-white border-bottom">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Dental-Tech</h5>
+          <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+
+        <!--Barra lateral cuerpo-->
+        <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+          <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+            <li class="nav-item mx-2">
+              <a class="nav-link active" aria-current="page" href="/dental-tech/Navbar/Navbar.html">Inicio</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="/dental-tech/Nosotros/aboutUs.html">Nosotros</a>
+            </li>
+
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="/dental-tech/Tienda/tienda.html">Tienda</a>
+            </li>
+
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="/dental-tech/Contacto /contacto.html">Contacto</a>
+            </li>
+
+          </ul>
+          <!--Inicio de sesion / registro-->
+          <div class="login d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
+            <a href="#signup" class="text-white">Registrate</a>
+            <a href="#login" class="text-white text-decoration-none px-4 py-1 rounded-4"
+              style="background-color:#4EADAF;">Inicia</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <section class="contact-info">
+    <h1 class="contact-title">CONTÁCTANOS</h1>
+    <div class="info-container">
+      <div class="form-container">
+        <!--Inicio del formulario de contacto-->
+        <form class="contact-form" id="contact-form" onsubmit="">
+          <div class="mb-3" id="field-nombre">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input name="nombre" type="text" class="form-control" id="nombre" placeholder="Nombre" required>
+          </div>
+          <p class="form_input-error" id="error-nombre">El nombre sólo puede contener letras y espacios.</p>
+          <div class="mb-3" id="field-telefono">
+            <label for="telefono" class="form-label">Número de teléfono</label>
+            <input name="telefono" type="tel" class="form-control" id="telefono" placeholder="5512345678" required>
+          </div>
+          <p class="form_input-error" id="error-telefono">El número de teléfono sólo puede contener números.</p>
+          <div class="mb-3" id="field-email">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input name="email" type="email" class="form-control" id="email" placeholder="usuario@mail.com" required>
+          </div>
+          <p class="form_input-error" id="error-email">El correo electrónico no es válido.</p>
+          <div class="mb-3">
+            <label for="TextArea" class="form-label">Mensaje o sugerencia</label>
+            <textarea name="mensaje" class="form-control" id="text" rows="3" required></textarea>
+          </div>
+          <button type="submit" id="button-submit" class="btn-sumbit">Enviar</button>
+          
+        </form>
+      </div>
+
+      <!--Ubicación con Google Maps-->
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.7957164862232!2d-99.18411832604158!3d19.334668843803566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0002f7d821a3%3A0xd15664bd2552456!2sFacultad%20de%20Odontolog%C3%ADa%20UNAM!5e0!3m2!1ses-419!2smx!4v1723675116960!5m2!1ses-419!2smx"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+
+    <div class="information">
+      <p>Calle Cualquiera 123, Coyoacán, Ciudad de México, CDMX</p>
+      <p>Tel. 55 1234 5678</p>
+      <p>contacto@dentaltech.com</p>
+    </div>
+
+    <div class="whatsapp-icon">
+      <img class="whatsapp-logo" src="../assets/whatsapp.png">
+    </div>
+  </section>
+
+  <!--Script para validación de formulario-->
+  <script src="./js/contacto.js"></script>
+  <!--Scripts para envío de información con EmailJS-->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <script type="text/javascript">
+    emailjs.init('fjFMbSI0OTk77ypC9')
+  </script>
+  <!--Scripts de Bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+body {
+  background-color:#000031;
+}
+
+.container-fluid {
+  width: 95%;
+}
+
+@media (max-width: 1024px){
+  .sidebar {
+    background-color: transparent;
+    backdrop-filter: blur(70px);
+  }}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .home-title {
+    font-family: "Outfit", sans-serif;
+    font-size: 6em;
+    padding-left: 10%;
+    padding-right: 10%;
+    color: white; 
+  }
+  .home-subtitle {
+    font-family: "Outfit", sans-serif;
+    font-size: 2.2em;
+    padding-left: 10%;
+    padding-right: 20%;
+    color: white;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px)  { 
+  .home-title {
+    font-family: "Outfit", sans-serif;
+    font-size: 3.5em;
+    padding-left: 10%;
+    padding-right: 10%;
+    color: white; 
+  }
+  .home-subtitle {
+    font-family: "Outfit", sans-serif;
+    font-size: 1.2em;
+    padding-left: 10%;
+    padding-right: 5%;
+    color: white;
+  }
+}
+
+/* Movil */
+@media (max-width: 767px) { 
+  .home-title {
+    font-family: "Outfit", sans-serif;
+    font-size: 2em;
+    padding-left: 10%;
+    padding-right: 10%;
+    color: white; 
+  }
+  .home-subtitle {
+    font-family: "Outfit", sans-serif;
+    font-size: 0.8em;
+    padding-left: 10%;
+    padding-right: 20%;
+    color: white;
+  }
+}
+
+.navbar, .text-white {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+ .text-white{
+  font-size: 1.1em;
+ }
+
+ .carousel, .mockup{
+  margin-bottom: 100px;
+ }
+
+ .mascota {
+  padding-left: 10%;
+ }
+
+
+ .container-full-width {
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mascota img {
+  position: absolute;
+  width: 40%;
+}
+
+.text-content {
+  width: 50%;
+  padding: 20px;
+}
