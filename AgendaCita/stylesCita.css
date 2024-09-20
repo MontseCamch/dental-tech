@@ -1,0 +1,251 @@
+
+body{
+    margin: 0;
+    background-color: #000031;
+    font-family: Outfit;
+    color: white; 
+}
+
+#agenda-cita{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+h1{
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.formcita{
+    margin: 0 40px;
+    width: 90%;
+    box-sizing: border-box;
+  }
+
+  .datosp{
+    text-align: center;
+  }
+
+  .recuadros{
+    border-radius: 10px;
+    border: 1px solid rgb(254, 254, 254);
+    text-align: center;
+    margin:10px;
+  }
+
+.sexo{
+    text-align: center;
+}
+#fechanacimiento{
+    justify-content: center;
+}
+.celphone{
+    text-align: center;
+}
+
+
+#fechacita{
+    justify-content: center;
+    text-align: center;
+}
+.fechacita{
+    text-align: center;
+}
+
+.horario{
+    text-align: center;
+}
+#horario{
+    justify-content: center;
+}
+.correo{
+    text-align: center;
+}
+.direccion{
+    text-align:center;
+}
+
+#label-direccion{
+    text-align: center;
+    align-items: center;
+}
+
+#enviar{
+    background-color: #69C6AF;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid #69C6AF;
+    width: 100px;
+    height: 35px;
+}
+
+#enviar:hover{
+    background-color: #00a27a;
+}
+
+.botonEnviar{
+width: 33.33%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#error{
+   text-align: center;
+}
+
+
+
+
+.datosp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#inputs-paciente{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    
+    #nombre{
+        width: 50%;
+    }
+    #apellido{
+        width: 50%;
+    }
+    
+    .fila-dos{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    
+    #input-sexo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 25%;
+    }
+    
+    #input-fechanacimiento{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 25%;
+    }
+    
+    #input-celphone{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+    }
+
+    .fila-tres{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    
+    #input-fechacita{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 25%;
+    }
+    
+    #input-horario{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 25%;
+    }
+    
+    #input-correo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+    }
+    
+    .fila-cuatro{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .direccion-datos{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    #colonia-codigo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        
+    }
+
+    .direccionCalle{
+        width: 60%;
+    }
+    
+    .direccionColonia{
+        width: 70%;
+    }
+    
+    .direccionCP{
+        width: 30%;
+    }
+    
+    /* Estilos para pantallas mediana (tablet) */
+    @media (max-width: 1920px){
+        .NombreA{
+            width: 50%;
+            justify-self: center;
+        }
+
+        .direccion-datos{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .direccionCalle{
+            width: 99%;
+        }
+
+        .direccionColonia{
+            width: 50%;
+        }
+        
+        .direccionCP{
+            width: 50%;
+        }
+    }
+
+    /* Estilos para pantallas pequeñas (movil) */
+    @media (max-width: 600px){
+        .direccion-datos{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .direccionCalle{
+            width: 97%;
+        }
+
+        .direccionColonia{
+            width: 50%;
+        }
+        
+        .direccionCP{
+            width: 50%;
+        }
+    }
