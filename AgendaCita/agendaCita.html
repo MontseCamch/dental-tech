@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulario para Agendar Cita</title>
+  <!-- boostrap Navbar-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <!-- CSS Página Agendar Cita-->
+  <link rel="stylesheet" href="stylesCita.css" />
+  <!-- CSS Navbar -->
+  <link rel="stylesheet" href="Navbar.css" />
+  <!--Tipografia -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&display=swap"
+    rel="stylesheet" />
+  
+</head>
+
+<body class="vh-100 overflow-auto" id="agenda-cita">
+  <!--NavBar-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+    <div class="container-fluid">
+      <!--Logo-->
+      <a class="navbar-brand" href="#">
+        <img src="LogoV2.png" alt="Logo" width="45" height="48"
+          class="navbar-brand fs-4 d-inline-block align-text-center" />Dental-Tech</a>
+      <!--Barra lateral Btn-->
+      <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel">
+        <!--Barra lateral encabezado-->
+        <div class="offcanvas-header text-white border-bottom">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+            Dental-Tech
+          </h5>
+          <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+
+        <!--Barra lateral cuerpo-->
+        <div class="offcanvas-body d-flex flex-column flex-lg-row p-2 p-lg-0">
+          <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+            <li class="nav-item mx-2">
+              <a class="nav-link active" aria-current="page" href="/dental-tech/Navbar/Navbar.html">Inicio</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="/dental-tech/Nosotros/aboutUs.html">
+                Nosotros
+              </a>
+            </li>
+
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="/dental-tech/Tienda/tienda.html">Tienda</a>
+            </li>
+
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="/dental-tech/Contacto /contacto.html">Contacto</a>
+            </li>
+          </ul>
+          <!--Inicio de sesion / registro-->
+          <div class="login d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
+            <a href="#signup" class="text-white">Registrate</a>
+            <a href="#login" class="text-white text-decoration-none px-4 py-1 rounded-4"
+              style="background-color: #4eadaf">Inicio de Sesión</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Termina NavBar-->
+
+  <!--Formulario de AgendarCita-->
+  <h1>AGENDA TU CITA</h1>
+
+  <div class="formcita">
+    <form id="formulario">
+      <div class="datosp">
+        <label for="NombreCompleto">Datos del paciente</label>
+        <div id="inputs-paciente">
+          <input type="text" id="Nombre" name="Nombre" placeholder="Nombre" class="recuadros NombreA" />
+          <input type="text" id="Apellido" name="Apellidos" placeholder="Apellidos" class="recuadros NombreA" />
+        </div>
+
+      </div>
+      <br />
+      <div class="fila-dos">
+        <div id="input-sexo">
+          <label for="sexo" class="sexo">Sexo</label>
+          <select name="sexo" class="recuadros" id="sexo">
+            <option value="">Selecciona</option>
+            <option value="value1">Femenino</option>
+            <option value="value2">Masculino</option>
+          </select>
+        </div>
+
+        <div id="input-fechanacimiento">
+          <label for="fechanacimiento" class="fechanacimiento">Fecha de nacimiento </label>
+          <input type="date" name="Fecha" placeholder="Fecha de nacimiento" class="recuadros" id="fechanacimiento"/>
+        </div>
+
+        <div id="input-celphone">
+          <label for="celphone" class="celphone"> Número de celular</label>
+          <input type="tel" name="Numero-celular" placeholder="Número Celular" class="recuadros" id="celphone" minlength="10"/>
+        </div>
+
+      </div>
+      <br>
+      <div class="fila-tres">
+        
+        <div id="input-fechacita">
+          <label for="fechacita" class="fechacita">Agendar cita</label>
+          <input type="date" name="cita" placeholder="Fecha" class="recuadros" id="fechacita" />
+        </div>
+
+        <div id="input-horario">
+          <label for="horario" class="horario">Horario de cita</label>
+          <input type="time" name="hora" placeholder="horario deseado" class="recuadros" id="horario" />
+        </div>
+
+        <div id="input-correo">
+          <label for="correo" class="correo">Correo eléctronico</label>
+          <input type="email" id="correo" name="email" placeholder="Correo electronico" class="recuadros" />
+        </div>
+
+      </div>
+      <br />
+      <div class="fila-cuatro">
+
+        <label for="direccion" id="label-direccion">Dirección del paciente</label>
+        <div class="direccion-datos">
+          <input type="text" placeholder="Nombre de la calle y Número ext." name="direccionCalle" id="direccion"
+            class="recuadros direccionCalle" />
+            <br>
+          <div id="colonia-codigo">
+            <input type="text" placeholder="Colonia" name="direccionColonia" id="direccion" class="recuadros direccionColonia" />
+            <input type="text" placeholder="CP" name="direccionCP" id="direccion" class="recuadros direccionCP" />
+          </div>
+        </div>
+      </div>
+
+      <br />
+      <br />
+      <input type="submit" value="Enviar" id="enviar" class="botonEnviar" />
+    </form>
+  </div>
+  <!-- Termina Formulario -->
+  <div id="error"></div>
+
+  <script src="registroCitas.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

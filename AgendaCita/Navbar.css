@@ -1,0 +1,24 @@
+
+  .container-fluid {
+    width: 100%;
+    border-top: 0%;
+    background-color:#69C6AF;
+  }
+
+  .navbar{
+    padding: 0%;
+  }
+  
+  @media (max-width: 1024px){
+    .sidebar {
+      background-color: #69C6AF;
+      backdrop-filter: blur(30px);
+    }}
+
+  @media (max-width: 767px) {  
+  .navbar, .text-white {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+  }
