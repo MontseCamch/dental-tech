@@ -15,10 +15,10 @@ nav {
    justify-content: center;
 }
 
-.navbar p {
-   color:#ffffff;
-   font-size: 18px;
-   display: flex !important;
+span {
+   color: #ffffff;
+   font-size: 20px;
+   font-family: "outfit" sans-serif;
 }
 
 
@@ -34,6 +34,13 @@ input[type="search"] {
    background-color: #000031;
    padding: 20px;
 }
+
+form .d-flex {
+display:flex;
+flex-wrap:wrap;
+justify-content: center;
+}
+
 
 .row{
    background-color: #000031;
@@ -53,12 +60,17 @@ input[type="search"] {
    background-color:  #000031;
    min-width: 160px;
    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-   padding: 12px 16px;
+   padding: 16px 16px;
    z-index: 1;
    flex-direction: column; /* Agrega esta propiedad para mostrar el menú en vertical */
  }
 .dropdown-content a {
    display:block;
+}
+
+a{
+   text-decoration: none !important;
+   font-size: 16px;
 }
 
 .notice-icon{
@@ -87,33 +99,53 @@ animation: pulsation 1s infinite;
       transform: scale(1);
    }
 }
+.card-container {
+   width: 100%; /* Se ajusta al ancho de su contenedor padre */
+   max-width: 300px; /* Limita el ancho de la tarjeta */
+   padding: 15px;
+   border: 1px solid #ccc;
+   border-radius: 10px;
+   box-sizing: border-box;
+   overflow: hidden; 
+}
 
 .btn {
+   flex: 1;
    font-family: "Kanit", sans-serif;
+   display: flex;
    color: #ffffff;
-   background-color: #4280b3;
    border: none;
-   border-radius: 5px;
+   border-radius: 20%;
    margin-bottom: 10px;
    padding: 10px;
    text-align: center;
+   min-height: 25px;
+   min-width: 50px;
 }
 
  .btn-container {
   display: flex;
-  justify-content: flex-start; 
-  gap: 10px; /* Espacio entre los botones */
+  justify-content:flex-start; 
+  gap: 5px; /* Espacio entre los botones */
   flex-wrap: wrap; /* Evita que se desborden */
   padding: 10px;
-  max-width: 100%; /* Asegura que no se desborde */
+  max-width: 100%;
+ height: auto;/* Asegura que no se desborde */
   box-sizing: border-box; 
   border-radius: 20%;/* Incluye el borde en el cálculo del tamaño */
 }
-.bi bi-cart4 {
-   width: 20px;
+
+.btn-upload, .btn-search {
+ border-radius: 20%;
+ white-space:nowrap;
+ overflow:hidden;
+ display: inline-block;    /* Bordes redondeados para ambos */
 }
 
 
+.bi bi-cart4 {
+   width: 20px;
+}
 
 
 /* Tarjetas de productos */
@@ -125,37 +157,69 @@ animation: pulsation 1s infinite;
    padding: 15px;
    margin: auto;
    text-align: center;
+   display: flex;
+   transition: background-color 0.3s;
 }
-
-
-
+.card:hover{
+   width: 105%;
+   height: 100%;
+   background-color:#ffffff !important;
+}
+.alert
+ {
+   font-family: "Outfit" sans-serif;
+   justify-content: center;
+   max-height: max-content;
+}
 
 .custom-card-bg {
    background-color: #000031 !important;
 }
 
-.card img {
-  
+.card img { 
   display: flex;
- align-content: center;
+ align-items: center;
+ justify-content: center;
+ transition: all 0.3s;
+}
+
+.img {
+   margin: 0 auto;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
 }
 
 .card-title {
+   font-family: "Outfit" sans-serif;
    font-size: 16px;
    color: #ffffff !important;
    justify-content: center;
 }
 
+.card:hover .card-title {
+   color: #000031 !important;
+}
+.card:hover .card-text {
+   color: #000031;
+}
+
 .card-text {
+   font-family: "Outfit" sans-serif;
    font-size: 14px;
    color: #ffffff;
    justify-content: center;
 }
 
 .card-price {
+   font-family: "Outfit" sans-serif;
    font-size: 16px;
    color: #ffffff;
 }
+.card:hover .card-price {
+   color: #000031;
+}
+
 .d-flex justify-content-end{
    width: 100%;
    padding: 10px;
@@ -170,18 +234,4 @@ animation: pulsation 1s infinite;
    max-width:600px;
    box-sizing: border-box;
    width: 100%;
-}
-/* Estilo del pie de página */
-footer {
-   background-color: #6bc1c7;
-   color: #ffffff;
-   text-align: center;
-   padding: 10px;
-   margin-top: 20px;
-}
-
-footer a {
-   color: #ffffff;
-   text-decoration: none;
-   margin: 0 5px;
 }
