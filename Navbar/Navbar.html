@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="./Navbar.css">
+  <link rel="shortcut icon" href="./Imagenes/LogoV1.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="vh-100 overflow-auto">
+
+  <!--NavBar-->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <!--Logo-->
+      <a class="navbar-brand" href="#">
+        <img src="./Imagenes/LogoV2.png" alt="Logo" width="45" height="48"
+          class="navbar-brand fs-4 d-inline-block align-text-center">Dental-Tech</a>
+      <!--Barra lateral Btn-->
+      <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel">
+
+        <!--Barra lateral encabezado-->
+        <div class="offcanvas-header text-white border-bottom">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Dental-Tech</h5>
+          <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+
+        <!--Barra lateral cuerpo-->
+        <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+          <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+            <li class="nav-item mx-2">
+              <a class="nav-link active" aria-current="page" href="./Navbar.html">Inicio</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="../AboutUs.html">Nosotros</a>
+            </li>
+
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="../tienda.html">Tienda</a>
+            </li>
+
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="../contacto/contacto.html">Contacto</a>
+            </li>
+
+            <li class="nav-item mx-2"></li>
+            <a href="../AgendaCita/agendaCita.html" class="text-white text-decoration-none px-4 py-1 rounded-4"
+              style="background-color:#4EADAF;">Agendar cita</a>
+            </li>
+
+          </ul>
+          <!--Inicio de sesion / registro-->
+          <div class="login d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
+            <a href="../crear-cuenta/creaCuenta.html" class="text-white">Registrate</a>
+            <a href="../InicioDeSesion/inicioSesion/Iniciasesion.html"
+              class="text-white text-decoration-none px-4 py-1 rounded-4" style="background-color:#4EADAF;">Inicia
+              Sesión</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <!-- Incio del encabezado de carrusel-->
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./Imagenes/Header/2.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./Imagenes/Header/1.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./Imagenes/Header/Salud dental.png" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div class="row beneficios-section my-5">
+    <!-- Columna izquierda: Lista de beneficios -->
+    <div class="col-md-6 d-flex flex-column justify-content-center">
+      <h2 class="mb-4">Beneficios de Nuestros Tratamientos</h2>
+      <ul class="lista-beneficios">
+        <li>
+          <img src="./Imagenes/Beneficio Icon.png" alt="Beneficio 1" class="icon">
+          Atención personalizada
+        </li>
+        <li>
+          <img src="./Imagenes/Beneficio Icon.png" alt="Beneficio 2" class="icon">
+          Resultados rápidos y efectivos
+        </li>
+        <li>
+          <img src="./Imagenes/Beneficio Icon.png" alt="Beneficio 3" class="icon">
+          Tecnología de punta
+        </li>
+        <li>
+          <img src="./Imagenes/Beneficio Icon.png" alt="Beneficio 4" class="icon">
+          Equipo de profesionales
+        </li>
+      </ul>
+    </div>
+
+    <!-- Columna derecha: Video -->
+    <div class="col-md-6 d-flex justify-content-end">
+      <div class="video-container">
+        <iframe src="./Imagenes/Clinica.mp4" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Nuestros servicios-->
+  <section>
+    <div>
+      <h1 class="servicios">Nuestros Servicios</h1>
+      <p class="parrafo">La tecnología más avanzada para tu sonrisa perfecta</p>
+    </div>
+
+  </section>
+
+  <!--Empiezan las cards de tratamientos-->
+  <div class="tratamientos row row-cols-2 row-cols-md-4 g-4">
+    <div class="col">
+      <div class="card h-100">
+        <div class="img-container">
+          <img src="./Imagenes/Tratamientos/1.png" class="card-img-top" alt="...">
+          <div class="overlay">
+            <h5>Limpieza Dental</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100">
+        <div class="img-container">
+          <img src="./Imagenes/Tratamientos/2.png" class="card-img-top" alt="...">
+          <div class="overlay">
+            <h5>Primera visita</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100">
+        <div class="img-container">
+          <img src="./Imagenes/Tratamientos/3.png" class="card-img-top" alt="...">
+          <div class="overlay">
+            <h5>Extracciones</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100">
+        <div class="img-container">
+          <img src="./Imagenes/Tratamientos/4.png" class="card-img-top" alt="...">
+          <div class="overlay">
+            <h5>Invisalign</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nuevas tarjetas añadidas -->
+    <div class="col">
+      <div class="card h-100">
+        <div class="img-container">
+          <img src="./Imagenes/Tratamientos/5.png" class="card-img-top" alt="...">
+          <div class="overlay">
+            <h5>Ortodoncia</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100">
+        <div class="img-container">
+          <img src="./Imagenes/Tratamientos/6.png" class="card-img-top" alt="...">
+          <div class="overlay">
+            <h5>Blanqueamiento</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100">
+        <div class="img-container">
+          <img src="./Imagenes/Tratamientos/7.png" class="card-img-top" alt="...">
+          <div class="overlay">
+            <h5>Cirugías</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100">
+        <div class="img-container">
+          <img src="./Imagenes/Tratamientos/8.png" class="card-img-top" alt="...">
+          <div class="overlay">
+            <h5>Odonto Pediatría</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <!--Preguntas frecuentes-->
+  <section class="faq-parallax">
+    <div class="faq-content">
+      <h2 id="Preguntas">Preguntas Frecuentes</h2>
+
+      <div class="faq">
+        <button class="faq-question">¿Qué servicios ofrecen? <span class="icon">+</span></button>
+        <div class="faq-answer">
+          <p>Ofrecemos una gama completa de servicios odontológicos, incluyendo limpiezas dentales, ortodoncia (como
+            Invisalign), implantes dentales, blanqueamientos, tratamientos de conducto y extracciones. Nuestro equipo
+            está comprometido con proporcionar una atención integral y personalizada.</p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="faq-question">¿Cómo puedo agendar una cita? <span class="icon">+</span></button>
+        <div class="faq-answer">
+          <p>Puedes agendar una cita directamente desde nuestra página web o llamándonos a nuestro número de contacto.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="faq-question"> ¿Con qué frecuencia debo realizarme una limpieza dental?<span
+            class="icon">+</span></button>
+        <div class="faq-answer">
+          <p>Se recomienda realizar una limpieza dental profesional cada seis meses para mantener una buena salud
+            bucal. Sin embargo, si tienes algún problema específico como gingivitis o periodontitis, podrías necesitar
+            visitas más frecuentes.</p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="faq-question"> ¿Es doloroso el procedimiento de implantes dentales?<span
+            class="icon">+</span></button>
+        <div class="faq-answer">
+          <p>La colocación de implantes dentales se realiza bajo anestesia local, por lo que no deberías sentir dolor
+            durante el procedimiento. Después del tratamiento, es normal experimentar algo de incomodidad o hinchazón,
+            pero suele ser temporal y puede controlarse con analgésicos recetados por el odontólogo.</p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="faq-question"> ¿Aceptan seguros dentales?
+          <span class="icon">+</span></button>
+        <div class="faq-answer">
+          <p>Sí, aceptamos una variedad de seguros dentales. Te recomendamos contactar a nuestro equipo para confirmar
+            si trabajamos con tu proveedor y cuáles tratamientos están cubiertos por tu póliza.</p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="faq-question"> ¿Los niños también pueden recibir tratamiento en su clínica?
+          <span class="icon">+</span></button>
+        <div class="faq-answer">
+          <p>Sí, ofrecemos una gama completa de tratamientos dentales para niños, desde limpiezas regulares hasta
+            tratamientos de ortodoncia y selladores dentales. Creemos en la importancia de crear una experiencia
+            positiva para los más pequeños, ayudándoles a sentirse cómodos y seguros durante su visita al dentista.
+          </p>
+        </div>
+      </div>
+
+      <!-- Más preguntas frecuentes aquí -->
+    </div>
+    <!-- Imagen con efecto Parallax -->
+    <div class="faq-image"></div>
+  </section>
+
+  <script>
+    const faqs = document.querySelectorAll('.faq');
+
+    faqs.forEach(faq => {
+      const question = faq.querySelector('.faq-question');
+      const icon = question.querySelector('.icon');
+
+      question.addEventListener('click', function () {
+        const isActive = faq.classList.toggle('active');
+
+        // Cambia el icono entre "+" y "-" según el estado
+        icon.textContent = isActive ? '-' : '+';
+
+        // Para asegurarse de que solo una pregunta esté abierta a la vez, cierra las demás.
+        document.querySelectorAll('.faq').forEach(item => {
+          if (item !== faq) {
+            item.classList.remove('active');
+            item.querySelector('.icon').textContent = '+'; // Restablecer icono de otras preguntas
+          }
+        });
+      });
+    });
+  </script>
+
+
+
+
+
+
+  <!-- Footer-->
+  <footer class="footer-container">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Sección de Redes Sociales -->
+        <div class="col-md-4 text-md-left text-center mb-3 mb-md-0">
+          <div class="social-icons">
+            <a href="#"><img src="./Imagenes/Facebook Icon.png" alt="Facebook"></a>
+            <a href="#"><img src="./Imagenes/Instagram Icon.png" alt="Instagram"></a>
+            <a href="#"><img src="./Imagenes/LinkedIn Icon.png" alt="LinkedIn"></a>
+          </div>
+        </div>
+
+        <!-- Logo en el centro con el año -->
+        <div class="col-md-4 text-center">
+          <div class="logo-section">
+            <img src="./Imagenes/LogoV2.png" alt="Logo" class="footer-logo">
+            <p>&copy; <span id="currentYear"></span> DentalTech</p>
+          </div>
+        </div>
+
+        <!-- Horarios de la clínica -->
+        <div class="col-md-4 text-md-right text-center">
+          <div class="horarios">
+            <h5>Horarios de la Clínica</h5>
+            <p>Lunes a Jueves: 8:00 AM - 7:00 PM</p>
+            <p>Viernes: 8:00 AM - 5:00 PM</p>
+            <p>Sábado: 8:00 AM - 3:00 PM</p>
+            <p>Domingo: Cerrado</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

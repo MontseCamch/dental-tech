@@ -1,0 +1,395 @@
+
+body{
+    margin: 0;
+    background-color: #000031;
+    font-family: Outfit;
+    color: white; 
+}
+
+#agenda-cita{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: #69C6AF;
+}
+
+.sidebar {
+    background-color: #69C6AF;
+    backdrop-filter: blur(30px);
+  }
+
+h1{
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.formcita{
+    margin: 0 40px;
+    width: 90%;
+    box-sizing: border-box;
+  }
+
+  .datosp{
+    text-align: center;
+  }
+
+  .recuadros{
+    border-radius: 10px;
+    border: 1px solid rgb(254, 254, 254);
+    text-align: center;
+    margin:10px;
+  }
+
+.sexo{
+    text-align: center;
+}
+
+.fechanacimiento{
+    text-align: center;
+}
+
+.celphone{
+    text-align: center;
+}
+
+
+#fechacita{
+    justify-content: center;
+    text-align: center;
+}
+.fechacita{
+    text-align: center;
+}
+
+.horario{
+    text-align: center;
+}
+#horario{
+    justify-content: center;
+}
+.correo{
+    text-align: center;
+}
+.direccion{
+    text-align:center;
+}
+
+#label-direccion{
+    text-align: center;
+    align-items: center;
+}
+
+#enviar{
+  margin: 30px 0;
+  background-color: #4EADAF;
+  border: none;
+  border-radius: 50px;
+  color: #000031;
+  font-family: "Kanit", sans-serif;
+  font-size: 22px;
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#enviar:hover{
+    background-color: #69C6AF;
+}
+
+#error{
+   text-align: center;
+}
+
+
+
+
+.datosp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#inputs-paciente{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    
+    #nombre{
+        width: 50%;
+    }
+    #apellido{
+        width: 50%;
+    }
+    
+    .fila-dos{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    
+    #input-sexo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 25%;
+    }
+    
+    #input-fechanacimiento{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 25%;
+    }
+    
+    #input-celphone{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+    }
+
+    .fila-tres{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    
+    #input-fechacita{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 25%;
+    }
+    
+    #input-horario{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 25%;
+    }
+    
+    #input-correo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+    }
+    
+    .fila-cuatro{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .direccion-datos{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    #colonia-codigo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        
+    }
+
+    .direccionCalle{
+        width: 60%;
+    }
+    
+    .direccionColonia{
+        width: 70%;
+    }
+    
+    .direccionCP{
+        width: 30%;
+    }
+    
+    /* Estilos para pantallas mediana (tablet) */
+    @media (max-width: 1920px){
+        .NombreA{
+            width: 50%;
+            justify-self: center;
+        }
+
+        .direccion-datos{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .direccionCalle{
+            width: 99%;
+        }
+
+        .direccionColonia{
+            width: 50%;
+        }
+        
+        .direccionCP{
+            width: 50%;
+        }
+    }
+
+    /* Estilos para pantallas pequeñas (movil) */
+    @media (max-width: 600px){
+        .direccion-datos{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .direccionCalle{
+            width: 97%;
+        }
+
+        .direccionColonia{
+            width: 50%;
+        }
+        
+        .direccionCP{
+            width: 50%;
+        }
+    }
+
+    .footer-container {
+  background-color: #69C6AF;
+  color: white;
+  padding: 40px 0;
+  margin: 0;
+  font-family: "Outfit", sans-serif;
+  position: relative;
+}
+
+.footer-container .social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.footer-container .social-icons a img {
+  width: 35px;
+  height: 35px;
+}
+
+.footer-container .social-icons a:hover {
+  transform: scale(1.2);
+}
+
+.footer-container .logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-container .footer-logo {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.footer-container p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.footer-container .horarios {
+  text-align: right;
+}
+
+.footer-container .horarios h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-container .horarios p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .footer-container .horarios {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .footer-container .social-icons {
+    text-align: center;
+  }
+}
+
+.footer-container {
+    background-color: #69C6AF;
+    color: white;
+    padding: 40px 0;
+    margin: 0;
+    font-family: "Outfit", sans-serif;
+    position: relative;
+  }
+  
+  .footer-container .social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .footer-container .social-icons a img {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .footer-container .social-icons a:hover {
+    transform: scale(1.2);
+  }
+  
+  .footer-container .logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-container .footer-logo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-container p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  .footer-container .horarios {
+    text-align: right;
+  }
+  
+  .footer-container .horarios h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .footer-container .horarios p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-container .horarios {
+      text-align: center;
+      margin-top: 20px;
+    }
+  
+    .footer-container .social-icons {
+      text-align: center;
+    }
+  }

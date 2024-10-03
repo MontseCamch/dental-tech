@@ -1,0 +1,11 @@
+{
+  "name": "dental-tech",
+  "version": "1.0.0",
+  "description": "servidor para pruebas",
+  "main": "index.js",
+  "scripts": {
+    "json:server": "json-server --watch ./data/users.json"
+  },
+  "author": "",
+  "license": "ISC"
+}

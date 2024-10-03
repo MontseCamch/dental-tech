@@ -1,0 +1,338 @@
+/* Cambia el fondo del cuerpo */
+body {
+   background-color: #000031 !important;
+   color: #ffffff;
+   font-family: "Outfit", sans-serif !important;
+}
+
+/* Estilo barra de menú*/
+#menu {
+   background-color: #69C6AF;
+}
+
+#menu .sidebar{
+   background-color: #69C6AF;
+   backdrop-filter: blur(30px);
+ }
+
+/* Estilo del encabezado y barra de búsqueda */
+nav {
+   justify-content: center !important;
+}
+
+.busqueda {
+   font-family: "Kanit", sans-serif !important;
+   background-color: #377a98 !important;
+   justify-content: center;
+   margin: 0;
+}
+
+#form {
+   width: auto;
+}
+
+span {
+   color: #ffffff;
+   font-size: 20px;
+   font-family: "outfit" sans-serif;
+}
+
+
+input[type="search"] {
+   width: 80%;
+   background-color: #ffffff;
+   padding: 10px;
+}
+
+
+/* Contenedor principal */
+.container-fluid mt-4 {
+   background-color: #000031;
+   padding: 20px;
+}
+
+form .d-flex {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+
+/*.row {
+   background-color: #000031;
+}*/
+
+/* Columna de botones */
+.col-md-3 {
+   font-family: "Kanit", sans-serif;
+}
+
+.dropdown {
+   position: relative;
+   display: inline-block;
+}
+
+.dropdown-content {
+   display: none;
+   position: absolute;
+   background-color: #000031;
+   min-width: 160px;
+   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+   padding: 16px 16px;
+   z-index: 1;
+   flex-direction: column;
+   /* Agrega esta propiedad para mostrar el menú en vertical */
+}
+
+.dropdown-content a {
+   display: block;
+}
+
+a {
+   text-decoration: none !important;
+   font-size: 16px;
+}
+
+.notice-icon {
+   color: #ffff;
+}
+
+.contador {
+   color: #000031;
+   position: absolute;
+
+   background-color: #ffffff;
+   padding: 5px 10px;
+   border-radius: 50%;
+   font-size: 16px;
+   animation: pulsation 1s infinite;
+}
+
+@keyframes pulsation {
+   0% {
+      transform: scale(1);
+   }
+
+   50% {
+      transform: scale(1.2);
+   }
+
+   100% {
+      transform: scale(1);
+   }
+}
+
+.card-container {
+   width: 100%;
+   /* Se ajusta al ancho de su contenedor padre */
+   max-width: 300px;
+   /* Limita el ancho de la tarjeta */
+   padding: 15px;
+   border: 1px solid #ccc;
+   border-radius: 10px;
+   box-sizing: border-box;
+   overflow: hidden;
+}
+
+.btn {
+   flex: 1;
+   font-family: "Kanit", sans-serif;
+   display: flex;
+   color: #ffffff;
+   border: none;
+   border-radius: 20%;
+   margin-bottom: 10px;
+   padding: 10px;
+   text-align: center;
+   min-height: 25px;
+   min-width: 50px;
+}
+
+.btn-container {
+   display: flex;
+   justify-content: flex-start;
+   gap: 5px;
+   /* Espacio entre los botones */
+   flex-wrap: wrap;
+   /* Evita que se desborden */
+   padding: 10px;
+   max-width: 100%;
+   height: auto;
+   /* Asegura que no se desborde */
+   box-sizing: border-box;
+   border-radius: 20%;
+   /* Incluye el borde en el cálculo del tamaño */
+}
+
+.btn-upload,
+.btn-search {
+   border-radius: 20%;
+   white-space: nowrap;
+   overflow: hidden;
+   display: inline-block;
+   /* Bordes redondeados para ambos */
+}
+
+
+.bi bi-cart4 {
+   width: 20px;
+}
+
+
+/* Tarjetas de productos */
+.card {
+   background-color: #000031;
+   border: 2px;
+   border-color: #ffffff !important;
+   border-radius: 10% !important;
+   padding: 15px;
+   margin: auto;
+   text-align: center;
+   display: flex;
+   transition: background-color 0.3s;
+}
+
+.card:hover {
+   width: 105%;
+   height: 100%;
+   background-color: #ffffff !important;
+}
+
+.alert {
+   font-family: "Outfit" sans-serif;
+   justify-content: center;
+   max-height: max-content;
+}
+
+.custom-card-bg {
+   background-color: #000031 !important;
+}
+
+.card img {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: all 0.3s;
+}
+
+.img {
+   margin: 0 auto;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.card-title {
+   font-family: "Outfit" sans-serif;
+   font-size: 16px;
+   color: #ffffff !important;
+   justify-content: center;
+}
+
+.card:hover .card-title {
+   color: #000031 !important;
+}
+
+.card:hover .card-text {
+   color: #000031;
+}
+
+.card-text {
+   font-family: "Outfit" sans-serif;
+   font-size: 14px;
+   color: #ffffff;
+   justify-content: center;
+}
+
+.card-price {
+   font-family: "Outfit" sans-serif;
+   font-size: 16px;
+   color: #ffffff;
+}
+
+.card:hover .card-price {
+   color: #000031;
+}
+
+.d-flex justify-content-end {
+   width: 100%;
+   padding: 10px;
+}
+
+#new-item-form {
+   color: #ffffff;
+   margin: auto;
+   border-color: #ffffff;
+   border-style: double !important;
+   padding: 20px;
+   max-width: 600px;
+   box-sizing: border-box;
+   width: 100%;
+}
+
+.footer-container {
+   background-color: #69C6AF;
+   color: white;
+   padding: 40px 0;
+   margin: 0;
+   font-family: "Outfit", sans-serif;
+   position: relative;
+ }
+ 
+ .footer-container .social-icons a {
+   display: inline-block;
+   margin: 0 10px;
+   transition: transform 0.3s ease;
+ }
+ 
+ .footer-container .social-icons a img {
+   width: 35px;
+   height: 35px;
+ }
+ 
+ .footer-container .social-icons a:hover {
+   transform: scale(1.2);
+ }
+ 
+ .footer-container .logo-section {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+ 
+ .footer-container .footer-logo {
+   width: 60px;
+   height: 60px;
+   margin-bottom: 10px;
+ }
+ 
+ .footer-container p {
+   margin: 0;
+   font-size: 1rem;
+ }
+ 
+ .footer-container .horarios {
+   text-align: right;
+ }
+ 
+ .footer-container .horarios h5 {
+   font-size: 1.2rem;
+   font-weight: bold;
+   margin-bottom: 10px;
+ }
+ 
+ .footer-container .horarios p {
+   margin: 5px 0;
+   font-size: 0.9rem;
+ }
+ 
+ @media (max-width: 768px) {
+   .footer-container .horarios {
+     text-align: center;
+     margin-top: 20px;
+   }
+ 
+   .footer-container .social-icons {
+     text-align: center;
+   }
+ }
