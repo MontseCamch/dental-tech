@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 .catch((err) => console.log(err));
             form.reset();
 
-            window.location.href = "../Navbar/index.html";
+            window.location.href = "../index.html";
         } else {
             alertElement.style.display = 'block';
             alertElement.classList.add('show');
