@@ -100,13 +100,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 .then((res) => console.log(res))
                 .catch((err) => console.log(err));
             form.reset();
+
+            window.location.href = "../Navbar/Navbar.html";
         } else {
             alertElement.style.display = 'block';
             alertElement.classList.add('show');
             alertElement.classList.remove('fade');
         }
 
-        window.location.href = "../contacto/contacto.html";
+        
 
 
     });

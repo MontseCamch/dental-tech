@@ -3,8 +3,7 @@
     font-family: "Outfit", sans-serif;
     background-color: #000031;
     color: #FFFFFF;
-   
-    margin: 0 40px;
+    margin: 0;
     box-sizing: border-box;
 }
 
@@ -15,6 +14,14 @@
     align-items: center;
     text-align: center;
 }
+
+.navbar{
+    background-color: #69C6AF;
+}
+
+.navbar .sidebar {
+    background-color: #69C6AF;
+  }
 
 .sign-up-form {
     width: 85vw;
@@ -159,3 +166,70 @@
         font-size: 42px;
     }
 }
+
+.footer-container {
+    background-color: #69C6AF;
+    color: white;
+    padding: 40px 0;
+    margin: 0;
+    font-family: "Outfit", sans-serif;
+    position: relative;
+  }
+  
+  .footer-container .social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .footer-container .social-icons a img {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .footer-container .social-icons a:hover {
+    transform: scale(1.2);
+  }
+  
+  .footer-container .logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-container .footer-logo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-container p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  .footer-container .horarios {
+    text-align: right;
+  }
+  
+  .footer-container .horarios h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .footer-container .horarios p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-container .horarios {
+      text-align: center;
+      margin-top: 20px;
+    }
+  
+    .footer-container .social-icons {
+      text-align: center;
+    }
+  }

@@ -11,6 +11,14 @@ body{
     box-sizing: border-box;
 }
 
+.navbar {
+    background-color: #69C6AF;
+}
+
+.sidebar {
+    background-color: #69C6AF;
+    backdrop-filter: blur(30px);
+  }
 
 h1{
     text-align: center;
@@ -38,9 +46,11 @@ h1{
 .sexo{
     text-align: center;
 }
-#fechanacimiento{
-    justify-content: center;
+
+.fechanacimiento{
+    text-align: center;
 }
+
 .celphone{
     text-align: center;
 }
@@ -73,23 +83,23 @@ h1{
 }
 
 #enviar{
-    background-color: #69C6AF;
-    color: white;
-    border-radius: 10px;
-    border: 1px solid #69C6AF;
-    width: 100px;
-    height: 35px;
-}
-
-#enviar:hover{
-    background-color: #00a27a;
-}
-
-.botonEnviar{
-width: 33.33%;
+  margin: 30px 0;
+  background-color: #4EADAF;
+  border: none;
+  border-radius: 50px;
+  color: #000031;
+  font-family: "Kanit", sans-serif;
+  font-size: 22px;
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
   display: block;
   margin-right: auto;
   margin-left: auto;
+}
+
+#enviar:hover{
+    background-color: #69C6AF;
 }
 
 #error{
@@ -249,3 +259,137 @@ width: 33.33%;
             width: 50%;
         }
     }
+
+    .footer-container {
+  background-color: #69C6AF;
+  color: white;
+  padding: 40px 0;
+  margin: 0;
+  font-family: "Outfit", sans-serif;
+  position: relative;
+}
+
+.footer-container .social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.footer-container .social-icons a img {
+  width: 35px;
+  height: 35px;
+}
+
+.footer-container .social-icons a:hover {
+  transform: scale(1.2);
+}
+
+.footer-container .logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-container .footer-logo {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.footer-container p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.footer-container .horarios {
+  text-align: right;
+}
+
+.footer-container .horarios h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-container .horarios p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .footer-container .horarios {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .footer-container .social-icons {
+    text-align: center;
+  }
+}
+
+.footer-container {
+    background-color: #69C6AF;
+    color: white;
+    padding: 40px 0;
+    margin: 0;
+    font-family: "Outfit", sans-serif;
+    position: relative;
+  }
+  
+  .footer-container .social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .footer-container .social-icons a img {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .footer-container .social-icons a:hover {
+    transform: scale(1.2);
+  }
+  
+  .footer-container .logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-container .footer-logo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-container p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  .footer-container .horarios {
+    text-align: right;
+  }
+  
+  .footer-container .horarios h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .footer-container .horarios p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-container .horarios {
+      text-align: center;
+      margin-top: 20px;
+    }
+  
+    .footer-container .social-icons {
+      text-align: center;
+    }
+  }

@@ -10,7 +10,7 @@ var correo = document.getElementById('correo');
 var direccion = document.getElementById('direccion');
 
 var error = document.getElementById('error');
-error.style.color = 'red';
+error.style.color = '#88DEB0';
 
 // Validar y guardar datos al enviar el formulario
 var form = document.getElementById('formulario');

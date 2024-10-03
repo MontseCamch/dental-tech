@@ -5,12 +5,17 @@ body {
   font-family: "Outfit", sans-serif;
 }
 
-.navbar{
+.navbar {
   background-color: #69C6AF;
 }
 
-.servicios{
-  color: white; 
+.sidebar {
+  background-color: #69C6AF;
+  backdrop-filter: blur(30px);
+}
+
+.servicios {
+  color: white;
   margin-top: 80px;
   text-align: center;
 }
@@ -19,6 +24,10 @@ body {
   color: white;
   margin-bottom: 60px;
   text-align: center;
+}
+
+.tratamientos {
+  margin: 30px;
 }
 
 .tratamientos .col {
@@ -74,8 +83,9 @@ body {
   position: relative;
 }
 
-
-
+.faq-content {
+  margin: 0 30px;
+}
 
 
 /* Media Queries */
@@ -85,6 +95,7 @@ body {
   .home-title {
     font-size: 4em;
   }
+
   .home-subtitle {
     font-size: 1.5em;
   }
@@ -95,6 +106,7 @@ body {
   .home-title {
     font-size: 3.5em;
   }
+
   .home-subtitle {
     font-size: 1.2em;
   }
@@ -145,8 +157,10 @@ body {
   position: relative;
   width: 100%;
   height: 0;
-  padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
-  overflow: hidden; /* Oculta cualquier desbordamiento */
+  padding-bottom: 56.25%;
+  /* Relación de aspecto 16:9 */
+  overflow: hidden;
+  /* Oculta cualquier desbordamiento */
   max-width: 100%;
   border: none;
   display: flex;
@@ -161,13 +175,15 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  border: none; /* Remueve los bordes del iframe */
+  border: none;
+  /* Remueve los bordes del iframe */
 }
 
 
 @media (max-width: 768px) {
   .video-container {
-    max-width: 100%; /* Asegura que el video se ajuste en pantallas pequeñas */
+    max-width: 100%;
+    /* Asegura que el video se ajuste en pantallas pequeñas */
   }
 }
 
@@ -175,7 +191,8 @@ body {
   background-color: #69C6AF;
   color: white;
   padding: 40px 0;
-  font-family: 'Arial', sans-serif;
+  margin: 0;
+  font-family: "Outfit", sans-serif;
   position: relative;
 }
 
@@ -231,7 +248,7 @@ body {
     text-align: center;
     margin-top: 20px;
   }
-  
+
   .footer-container .social-icons {
     text-align: center;
   }
@@ -241,32 +258,41 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100vh; /* Ocupa toda la altura de la pantalla */
-  overflow: hidden; /* Evita que el contenido se desborde */
+  height: 100vh;
+  /* Ocupa toda la altura de la pantalla */
+  overflow: hidden;
+  /* Evita que el contenido se desborde */
   position: relative;
 }
+
 #Preguntas {
   margin-bottom: 30px;
 }
+
 .faq-content {
-  width: 50%; /* Las preguntas ocuparán el 50% a la izquierda */
+  width: 50%;
+  /* Las preguntas ocuparán el 50% a la izquierda */
   padding: 20px;
-  z-index: 1; /* Para asegurarse de que el contenido esté sobre la imagen */
-  background-color: none; 
-  color: white;/* Fondo blanco translúcido para las preguntas */
+  z-index: 1;
+  /* Para asegurarse de que el contenido esté sobre la imagen */
+  background-color: none;
+  color: white;
+  /* Fondo blanco translúcido para las preguntas */
 }
 
 .faq-image {
-  width: 50%; 
+  width: 50%;
   background-image: url('/dental-tech/Navbar/Imagenes/DoctorFondo.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 500px; /* Ajusta la altura según lo necesario */
+  height: 500px;
+  /* Ajusta la altura según lo necesario */
   position: relative;
   right: 0;
   top: 0;
-  background-attachment: scroll; /* Sin parallax */
+  background-attachment: scroll;
+  /* Sin parallax */
 }
 
 .faq {
@@ -297,23 +323,28 @@ body {
 }
 
 .faq.active .faq-answer {
-  max-height: 100px; /* Ajusta según el contenido */
+  max-height: 100px;
+  /* Ajusta según el contenido */
 }
 
 /* Ajustes para dispositivos móviles */
 @media (max-width: 768px) {
   .faq-parallax {
-    flex-direction: column; /* Cambia a columna para pantallas pequeñas */
+    flex-direction: column;
+    /* Cambia a columna para pantallas pequeñas */
   }
 
-  .faq-content, .faq-image {
+  .faq-content,
+  .faq-image {
     width: 100%;
-    height: auto; /* Ajuste automático de altura */
+    height: auto;
+    /* Ajuste automático de altura */
   }
 
   .faq-image {
-    position: relative; /* Para móviles, quitar efecto absoluto */
-    background-attachment: scroll; /* Desactivar parallax en móviles */
+    position: relative;
+    /* Para móviles, quitar efecto absoluto */
+    background-attachment: scroll;
+    /* Desactivar parallax en móviles */
   }
 }
-
